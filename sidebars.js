@@ -1,6 +1,6 @@
 module.exports = {
   someSidebar: {
-    'Oraichain Whitepaper': ['Introduction', 'Terminology', 'SystemOverview',"TokenEconomics","DecentralizedValidatorSampling","ProtocolMessages"],
+    'Oraichain Whitepaper': ['Introduction', 'Terminology', 'SystemOverview', 'UseCases', "TokenEconomics","DecentralizedValidatorSampling","ProtocolMessages"],
     // Developer: ['mdx'],
   },
 };

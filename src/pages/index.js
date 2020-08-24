@@ -8,32 +8,60 @@ import styles from './styles.module.css';
 
 const features = [
   {
-    title: <>Easy to Use</>,
+    title: <>AI marketplace    </>,
     imageUrl: 'img/undraw_docusaurus_mountain.svg',
     description: (
       <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
+       Search, trial, and select from an ever-growing library of AI algorithms 
+       created by a community of service providers. Integrate AI services into your own applications.
       </>
     ),
   },
   {
-    title: <>Focus on What Matters</>,
+    title: <>AI Publisher    </>,
     imageUrl: 'img/undraw_docusaurus_tree.svg',
     description: (
       <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
+       Our publishing infrastructure provides both a central hub for creating, 
+       editing, and managing your AI services and the tools to launch those services to a global market.
       </>
     ),
   },
   {
-    title: <>Powered by React</>,
+    title: <>ORAI Staking    </>,
     imageUrl: 'img/undraw_docusaurus_react.svg',
     description: (
       <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
+       Earn more while holding ORAI tokens by vesting them in 30-day staking sessions.
+        By staking ORAI tokens, you support the operations of our blockchain network and in doing so you will be rewarded with more ORAI tokens for your contributions.
+      </>
+    ),
+  },
+  {
+    title: <>Request for AI </>,
+    imageUrl: 'img/undraw_docusaurus_react.svg',
+    description: (
+      <>
+      The Request for AI portal (RFAI) : A community crowdsource portal allowing anyone to make project requests for,
+       and offer to fund, new AI services that are currently not available on the market.
+      </>
+    ),
+  },
+  {
+    title: <>Oracle AI    </>,
+    imageUrl: 'img/undraw_docusaurus_react.svg',
+    description: (
+      <>
+      Lorem ipsum dolor sit amet, pretium pretium tempor.Lorem ipsum
+      </>
+    ),
+  },
+  {
+    title: <>ORAI Defi</>,
+    imageUrl: 'img/undraw_docusaurus_react.svg',
+    description: (
+      <>
+      Lorem ipsum dolor sit amet, pretium pretium tempor.Lorem ipsum
       </>
     ),
   },

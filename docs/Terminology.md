@@ -11,7 +11,7 @@ AI Provider là tác nhân tham gia vào hệ thống để cung cấp AI Data S
 
 ### AI Data Source
 
-AI Data Source là thành phần cơ bản trong hệ thống Oraichain. Nó miêu tả cách có thể lấy dữ liệu từ các AI model. Trong Oraichain AI Data Source có thể được đăng ký bở AI Provider. Việc đăng ký được thực hiện thông qua gửi `MsgCreateAIDataSource` tới hệ thống. Trong thông điệp đăng ký AI Data Source, AI Provider sẽ đặc tả một số tham số của AI Data Source gồm:
+AI Data Source là thành phần cơ bản trong hệ thống Oraichain. Nó miêu tả cách có thể lấy dữ liệu từ các AI model. Trong Oraichain, AI Data Source có thể được đăng ký bởi AI Provider. Việc đăng ký được thực hiện thông qua gửi `MsgCreateAIDataSource` tới hệ thống. Trong thông điệp đăng ký AI Data Source, AI Provider sẽ đặc tả một số tham số của AI Data Source gồm:
 
 - the sender who wish to create the data source.( Có thể giống hoặc khác với AI provider)
 - AI Provider người mà sẽ nhận incentive khi có yêu cầu gọi đến AI Data Source
@@ -47,5 +47,7 @@ The second phase then aggregates all of the data reports returned by the validat
 #### Example
 
 ### Validator
+
+Thực hiện đóng block và validator dữ liệu từ các AI provoder. Validator sẽ chịu tránh nghiệm cho dữ liệu được họ cung cấp. Họ sẽ thực hiện nhiệm vụ chạy test case -> incentive nhiều hơn từ fee
 
 ### Oracle Data Proof

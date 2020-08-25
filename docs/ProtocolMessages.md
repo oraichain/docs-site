@@ -13,6 +13,10 @@ title: Protocol Messages
 
 ### MsgEditOracleScript
 
+### MsgCreateTestCase
+
+### MsgEditTestCase
+
 ### MsgExcuteTestCase
 
 ### MsgRequestData

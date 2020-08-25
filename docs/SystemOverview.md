@@ -22,3 +22,5 @@ The role the validators described above is similar to those of validators on man
 Điểm chính tạo nên sự khác biệt cho Oraichain nằm ở nhiệm vụ thứ 2 của validator. Nhiệm vụ thứ 2 của validator trong mạng Oraichain là xác thực các dữ liệu AI từ ngoài và đưa vào mạng blockchain. 
 
 Flow request AI data.
+
+![System overview](./../static/img/Oraichain_request_data_flow.png)

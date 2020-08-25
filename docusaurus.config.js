@@ -5,8 +5,8 @@ module.exports = {
   baseUrl: '/',
   onBrokenLinks: 'throw',
   favicon: 'img/favicon.ico',
-  organizationName: 'oraichain', // Usually your GitHub org/user name.
-  projectName: 'docs-site', // Usually your repo name.
+  organizationName: 'oraichain', 
+  projectName: 'docs-site', 
   themeConfig: {
     navbar: {
       title: 'Oraichain',
@@ -21,12 +21,7 @@ module.exports = {
           label: 'Docs',
           position: 'left',
         },
-        // {to: 'blog', label: 'Blog', position: 'left'},
-        // {
-        //   href: 'https://github.com/facebook/docusaurus',
-        //   label: 'GitHub',
-        //   position: 'right',
-        // },
+        // {to: 'blog', label: 'Blog', position: 'left'}
       ],
     },
     footer: {

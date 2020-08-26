@@ -18,7 +18,6 @@ Deploys and registers a new ai data source to Oraichain. Once registered, the da
 
 Parameter | Type | Description
 ---------|----------|---------
- Sender | `sdk.AccAddress` | The address of the message's sender. Note that the sender does not need to be the same as the owner
  Owner | `sdk.AccAddress` | The address of the entity who will be responsible for maintaining the ai data source
  Name | `string` | The human-readable string name for this data source
 Description | `string` | The description of this data source
@@ -26,12 +25,11 @@ Source Code URL | `string` | The URL for the source code of this data source
 
 ### MsgEditAIDataSource
 
-Edits an existing data source given the unique `int64` identifier (i.e. dataSourceID). The sender must be the owner of the data source for the transaction to succeed.
+Edits an existing data source given the unique `int64` identifier (i.e. dataSourceID). 
 
 Parameter | Type | Description
 ---------|----------|---------
 DataSourceID | `int64` | The unique identifier number assigned to the data source when it was first registered
-Sender | `sdk.AccAddress` | The address of the message's sender. Note that The sender must be the owner of the data source for the transaction to succeed.
 Owner | `sdk.AccAddress` | The address of the entity who will be responsible for maintaining the ai data source
 Name | `string` | The human-readable string name for this data source
 Description | `string` | The description of this data source
@@ -43,8 +41,7 @@ Deploys a new oracle script to Oraichain's network. Once registered, the script 
 
 Parameter | Type | Description
 ---------|----------|---------
-Sender | `sdk.AccAddress` | The address of the message's sender. Note that the sender does not need to be the same as the owner
-Owner | `sdk.AccAddress` | The address of the entity who will be responsible for maintaining the ai data source
+Owner | `sdk.AccAddress` | The address of the entity who will be responsible for maintaining the Oracle Script
 Name | `string` | The human-readable string name for this data source
 Description | `string` | The description of this data source
 Code | `[]byte` | The Owasm-compiled binary attached to this oracle script
@@ -58,8 +55,7 @@ Edits an existing oracle script given the unique `int64` identifier (i.e. oracle
 Parameter | Type | Description
 ---------|----------|---------
 OracleScriptID	| `int64` | The unique identifier number assigned to the oracle script when it was first registered on Oraichain
-Sender | `sdk.AccAddress` | The address of the message's sender. The sender must be the owner of the oracle script for the transaction to succeed.
-Owner | `sdk.AccAddress` | The address of the entity who will be responsible for maintaining the ai data source
+Owner | `sdk.AccAddress` | The address of the entity who will be responsible for maintaining the Oracle Script
 Name | `string` | The human-readable string name for this data source
 Description | `string` | The description of this data source
 Code | `[]byte` | The Owasm-compiled binary attached to this oracle script
@@ -71,8 +67,7 @@ Source Code URL	| `string`| The URL for the source code of this testcase.
 Parameter | Type | Description
 ---------|----------|---------
 TestcaseId	| `int64` | The unique identifier number assigned to the testcase when it was first registered on Oraichain
-Sender | `sdk.AccAddress` | The address of the message's sender. Note that the sender does not need to be the same as the owner.
-Owner | `sdk.AccAddress` | The address of the entity who will be responsible for maintaining the ai data source
+Owner | `sdk.AccAddress` | The address of the entity who will be responsible for maintaining the test case
 Name | `string` | The human-readable string name for this data source
 Description | `string` | The description of this data source
 Schema | `string` | The schema detailing the inputs and outputs of this testcase, as well as the corresponding types
@@ -83,12 +78,45 @@ Source URL	| `string`| The URL for the source code of this testcase.
 Parameter | Type | Description
 ---------|----------|---------
 TestcaseId	| `int64` | The unique identifier number assigned to the testcase when it was first registered on Oraichain
-Sender | `sdk.AccAddress` | The address of the message's sender. The sender must be the owner of the testcase for the transaction to succeed.
-Owner | `sdk.AccAddress` | The address of the entity who will be responsible for maintaining the ai data source
+Owner | `sdk.AccAddress` | The address of the entity who will be responsible for maintaining the test case
 Name | `string` | The human-readable string name for this data source
 Description | `string` | The description of this data source
 Schema | `string` | The schema detailing the inputs and outputs of this testcase, as well as the corresponding types
 Source URL	| `string`| The URL for the source code of this oracle script
+
+Ví dụ schema: 
+```json
+{
+    "inputs":{
+        "image": {
+            "type": "string",
+            "title": "The image url",
+            "default": "",
+            "examples": [
+                "https://gateway.datochain.com/ipfs/QmdXBX8KJw3nkXgJe1NFrSGckWETnREdVQPS94BBkogKE7"
+            ]
+        },
+    },
+    "outputs":{
+       "name": {
+            "type": "string",
+            "title": "Tên trên chứng minh thư nhân dân",
+            "default": "",
+            "examples": [
+                "Nguyen Van A"
+            ]
+        }, 
+        "age": {
+            "type": "int64",
+            "title": "Tuổi",
+            "default": "",
+            "examples": [
+                12
+            ]
+        }, 
+    }
+}
+```
 
 ### MsgExcuteTestCase
 
@@ -99,7 +127,7 @@ Sender | `sdk.AccAddress` | The address of the message's sender.
 Calldata | `string` | The data passed over to the oracle script for the script to use during its execution
 AskCount | `int64` | The number of validators that are requested to respond to this request
 MinCount | `int64` | The minimum number of validators necessary for the request to proceed to the execution phase
-ClientID | `string` | the unique identifier of this oracle request, as specified by the client. This same unique ID will be sent back to the requester with the oracle response.
+RequestID | `string` | the unique identifier of this oracle request, as specified by the client. This same unique ID will be sent back to the requester with the oracle response.
 
 ### MsgRequestData
 
@@ -109,8 +137,43 @@ Parameter | Type | Description
 ---------|----------|---------
 OracleScriptID	| `int64` | The unique identifier number assigned to the oracle script when it was first registered on Oraichain
 Sender | `sdk.AccAddress` | The address of the message's sender.
-Calldata | `string` | The data passed over to the oracle script for the script to use during its execution
+Requestdata | `string` | The data passed over to the oracle script for the script to use during its execution
 AskCount | `int64` | The number of validators that are requested to respond to this request
 MinCount | `int64` | The minimum number of validators necessary for the request to proceed to the execution phase
-ClientID | `string` | the unique identifier of this oracle request, as specified by the client. This same unique ID will be sent back to the requester with the oracle response.
+RequestID | `string` | the unique identifier of this oracle request, as specified by the client. This same unique ID will be sent back to the requester with the oracle response.
 fee | `int64` | transaction fee
+
+Ví dụ Requestdata: 
+```json
+{
+    "testcase":[
+        {
+            "inputs":{
+                "image": "https://gateway.datochain.com/ipfs/QmdXBX8KJw3nkXgJe1NFrSGckWETnREdVQPS94BBkogKE7"
+            },
+            "expectedOutput":{
+                "name":"Nguyen Van A",
+                "age":22
+            }
+        },
+        {
+            "inputs":{
+                "image": "https://gateway.datochain.com/ipfs/QmdXBX8KJw3nkXgJe1NFrSGckWETnREdVQPS94BBkogKE7"
+            },
+            "expectedOutput":{
+                "name":"Nguyen Van A",
+                "age":22
+            }
+        }
+    ],
+    "data":{
+            "inputs":{
+                "image": "https://gateway.datochain.com/ipfs/QmdXBX8KJw3nkXgJe1NFrSGckWETnREdVQPS94BBkogKE7"
+            },
+            "expectedOutput":{
+                "name":"Nguyen Van A",
+                "age":22
+            }
+        }
+}
+```

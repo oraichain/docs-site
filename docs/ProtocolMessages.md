@@ -44,7 +44,6 @@ Parameter | Type | Description
 Owner | `sdk.AccAddress` | The address of the entity who will be responsible for maintaining the Oracle Script
 Name | `string` | The human-readable string name for this data source
 Description | `string` | The description of this data source
-Code | `[]byte` | The Owasm-compiled binary attached to this oracle script
 Schema | `string` | The schema detailing the inputs and outputs of this oracle script, as well as the corresponding types
 Source Code URL	| `string`| The URL for the source code of this oracle script
 
@@ -58,7 +57,6 @@ OracleScriptID	| `int64` | The unique identifier number assigned to the oracle s
 Owner | `sdk.AccAddress` | The address of the entity who will be responsible for maintaining the Oracle Script
 Name | `string` | The human-readable string name for this data source
 Description | `string` | The description of this data source
-Code | `[]byte` | The Owasm-compiled binary attached to this oracle script
 Schema | `string` | The schema detailing the inputs and outputs of this oracle script, as well as the corresponding types
 Source Code URL	| `string`| The URL for the source code of this testcase.
 

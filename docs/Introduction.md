@@ -6,7 +6,11 @@ sidebar_label: Introduction
 
 ## Oraichain Whitepaper
 
-Tài liệu này mô tả outline kế hoạch nghiên cứu và triển khai của Oraichain(Oracle Artificial Intelligence for Blockchain).
+A smart contract is not smart enough to tackle classification, prediction, or detection problems that AI techniques can easily solve. Those problems come from limitations of smart contract including different programming languages, expensive storage, and execution environments.
+
+The proposed Oraichain could be a bridge to bring AI to smart contracts. The Oraichain mechanism seems similar to Band Protocol, and Chainlink, but it focuses more on AI APIs and the quality of provided AI models. In each user request, test cases are attached and a provider’s API must pass test cases in order to receive payment.
+
+The features of test cases and AI model quality managed by validators make Oraichain unique and different. This whitepaper describes the Oraichain's architecture, terminology, token economics, and use cases. Oraichain stands for Oracle Artificial Intelligence for Blockchain.
 
 ### Introduction
 

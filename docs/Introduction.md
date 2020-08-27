@@ -13,7 +13,6 @@ The proposed Oraichain could be a bridge to bring AI to smart contracts. The Ora
 The features of test cases and AI model quality managed by validators make Oraichain unique and different. This whitepaper describes the Oraichain's architecture, terminology, token economics, and use cases. Oraichain stands for Oracle Artificial Intelligence for Blockchain.
 
 ### Introduction
-
 Các nền tảng smart contract phổ biến hiện nay nơi mà thực hiện các đoạn mã trên môi trường blockchain một cách minh bạch và tin tưởng việc thực hiện các đoạn mã một cách minh bạch và tin tưởng mang lại nhiều giá trị và giúp giải quyết các bài toán nhưng các đoạn mã thực hiện trong các smart contract gặp vấn đề là thiếu nguồn data thực tế từ ngoài vào một cách tin cậy. Sự thiếu thông tin này làm hạn chế các khả năng và tính hiệu quả của các smart contract.
 
 Current smart contracts are not smart enough to solve the below scenarios.

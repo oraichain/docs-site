@@ -7,7 +7,15 @@ Oraichain supports DApps in connecting AI to their smart contracts and tradition
 ## Connecting AI to smart contracts in DApps
 AI will be the next big thing and upgrade of smart contracts in DApps. How to make smart contracts smarter with AI. We would like to introduce several use cases where smart contracts can leverage AI.
 
-### DApp sử dụng định danh bằng khuôn mặt
+### Flexible smart contracts using face authentication
+There are several scenarios in which face authentication is very useful as follows:
++ Using your face to get your balance instead of using a private key.
++ Withdraw using your face
++ Using your face in order to reset your private/public key pair.
++ Using both your private key and face in order to execute a smart contract.
+
+![Flexible smart contracts using face authentication](./../static/img/face-authentication.png)
+
 + Gửi ảnh đăng kí —> ORAI nhận ảnh + sinh ra một UID —> gọi AI Provider. —> ORAI ghi kết quả lên blockchain —> Callback tới ứng dụng
 + Gửi ảnh đăng nhập —> ORAI nhận ảnh —> gọi AI Provider —> ORAI ghi kết quả UID lên blockchain —> Callback tới ứng dụng
 

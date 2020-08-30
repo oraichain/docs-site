@@ -33,7 +33,7 @@ module.exports = {
           items: [
             {
               label: 'Telegram',
-              href: 'https://t.me/joinchat/oraichain',
+              href: 'https://t.me/oraichain_official',
             },
             {
               label: 'Twitter',

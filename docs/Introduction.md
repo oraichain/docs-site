@@ -40,13 +40,20 @@ The proposed Oraichain could be a bridge to bring AI to smart contracts. The Ora
 - ORAI DAO: you are the governor of the product serving you. Oraichain is of, for, and by the community. Oraichain team just helps initialize the project and when the mainnet is started, any changes of Oraichain should be reviewed by validators and stakeholders.
 
 ### Oracle data on Oraichain
+Smart contracts are a self-operating computer program that automatically executes when specific conditions are met:
 >A smart contract is a computer program or a transaction protocol which is intended to automatically execute, control or document legally relevant events and actions according to the terms of a contract or an agreement. The objectives of smart contracts are the reduction of need in trusted intermediators, arbitrations and enforcement costs, fraud losses, as well as the reduction of malicious and accidental exceptions. (From [Ethereum whitepaper](https://ethereum.org/en/whitepaper) and [Wikipedia](https://en.wikipedia.org/wiki/Smart_contract))
 
-Các nền tảng smart contract phổ biến hiện nay nơi mà thực hiện các đoạn mã trên môi trường blockchain một cách minh bạch và tin tưởng việc thực hiện các đoạn mã một cách minh bạch và tin tưởng mang lại nhiều giá trị và giúp giải quyết các bài toán nhưng các đoạn mã thực hiện trong các smart contract gặp vấn đề là thiếu nguồn data thực tế từ ngoài vào một cách tin cậy. Sự thiếu thông tin này làm hạn chế các khả năng và tính hiệu quả của các smart contract.
+The common use case of smart contracts is only tokenization, and it has not been adopted in the industry yet. The primary reason is that smart contracts are not connected to off-chain data that is not stored on the blockchain. Due to interacting with off-chain data that can lead to multiple states of the blockchain, it is not allowed to interact with off-chain data. A consensus protocol on the blockchain ensures a single state of the blockchain ledger.
 
-Oraichain giúp giải quyết vấn đề này bằng cách cung cấp cơ chế cho phép các smart contract có thể sử dụng các dữ liệu từ bên ngoài một cách tin tưởng. Đặc biệt orai tập chung vào các dữ liệu từ các model AI. Dự án được thiết kế theo các mục đích chính sau:
+The single state of blockchain ledger makes all operations deterministic. It means that the same operation performed on different nodes should give the same result. Note that the different in results will lead to failed consensus among blockchain nodes. The typical example of non-deterministic operations is calling an external API from outside since each API call could return different values.
 
-1. Tối ưu hoá cho dữ liệu AI.
-2. Kiểm tra độ chính xác của AI providers dựa trên yêu cầu của người dùng. Ví dụ: login sử dụng mật khẩu sẽ đúng 100%, nhưng nếu sử dụng face recognition thì độ chính xác là 90%~100%.
-3. Tộc độ và khả năng mở rộng
-4. Cross-Chain Compatibility: The system must be blockchain-agnostic and able to serve data to most publicly available blockchains. Verification of data authenticity on the target blockchains must be efficient and trustless by nature.
+An oracle is a blockchain middleware that creates a secure connection between smart contracts and various off-chain resources that they need to function. It acts as the middle layer between a blockchain and an API that translates information for the blockchain to read.
+An oracle plays a role as a blockchain middleware creating a secure connection between smart contracts and off-chain data, such as external APIs of price and weather. An oracle could be a set of blockchain nodes that are randomly selected to perform data fetching from external data sources. The data fetched by an oracle will be written to its own blockchain or Ethereum.
+
+Oraichain provides an oracle that helps fetch external data securely and its architecture is designed to focus more on AI data sources as follows:
+- Request format including input parameters and test cases
+- API testing based test cases that is the unique functionality.
+- Test providers proposing suitable test cases that users can choose to test an AI API.
+- API marketplace and test-case marketplace
+- High scalability and performance
+- Cross-chain compatibility that is able to serve data to most publicly available blockchains. The target blockchains can verify data on Oraichain efficiently.

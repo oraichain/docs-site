@@ -40,7 +40,7 @@ When we call **ORAI**, it means that it is native ORAI tokens created and contai
 
 Figure here!
 
-**BAND token release schedule (%)**
+**ORAI token release schedule (%)**
 
 All team, advisors, and private sale investors' tokens are locked until mainnet launch.
 Therefore, no founders, team members, advisors, or investors in the private sale round will be able to sell ERC20-ORAI tokens on any secondary market at the time of listing or any time prior to the mainnet launch.
@@ -55,7 +55,7 @@ Funds raised in Seed and Private rounds will be spent according to the following
 - 10% operation.
 - 10% legal and audit fee.
 
-Funds are raised in ETH and then they are converted to stable coins in order to avoid crypto price’s volatility risk. ETH and stable coins are store in multi-signature wallets that require at least 2 out of 3 signatures from ORAI founders.
+Funds are raised in ETH and then they are converted to stable coins in order to avoid crypto price’s volatility risk. ETH and stable coins are store in multi-signature wallets that require at least 3 out of 4 signatures from ORAI founders.
 
 ## ORAI token utility
 When ORAI mainnet is officially launched, the ORAI token is required to secure and power the decentralized oracle network of validators. The native ORAI token is used in different scenarios below:

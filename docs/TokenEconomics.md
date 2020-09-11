@@ -59,15 +59,15 @@ Funds are raised in ETH and then they are converted to stable coins in order to 
 
 ## ORAI token utility
 When ORAI mainnet is officially launched, the ORAI token is required to secure and power the decentralized oracle network of validators. The native ORAI token is used in different scenarios below:
-- Staking for validators: all validators are required to stake BAND in order to be selected to create a block or fulfill data requests.
+- Staking for validators: all validators are required to stake ORAI in order to be selected to create a block or fulfill data requests.
 - Transaction fee: the ORAI token is required in order to run an AI request sent to the Oraichain network.
-- Participation in BandChain Governance: the Oraichain network is organized in the DAO manner, all protocol upgrades and parameter changes must be voted by token holders.
+- Participation in Oraichain Governance: the Oraichain network is organized in the DAO manner, all protocol upgrades and parameter changes must be voted by token holders.
 
 ### Transaction fee
 The token plays a role as transaction fee that is paid for parties as follows:
 - Request-executing validators
 - AI-API providers
-- Test-case providers
+- Testcase providers
 - Block-creating validators.
 
 Transaction fee is different depending on fee requirement of request-executing validators, AI-API providers, and test-case providers. Transaction fee should be explicitly defined in [MsgRequestData](ProtocolMessages#msgrequestdata) of a request. When a request comes, request-executing validators must decide if they want to execute it. After that, a random validator is chosen from the willing request-executing validators. The chosen validator will execute the oracle script and create MsgResultReport in the end. The validator must clarify the fee paid to AI-API providers, test-case providers, and block-creating validators in the MsgResultReport.

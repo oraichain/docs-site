@@ -48,7 +48,7 @@ while the community tax is set to be 2% or 0.02
 
 **(4) power fraction = voting power / total voting power**
 
-**(5) a validator's reward = total fee * vote multiplier * power fraction**
+**(5) a validator's reward = total fee * reward multiplier * power fraction**
 
 **(6) remaining = remaining - reward for each validator**
 
@@ -60,4 +60,16 @@ the loop goes on until all validators have received their rewards.
 
 ### Second way
 
-The validators can actively participate in executing the oracle scripts to receive rewards by publishing reports. A report contains information of the validator that created it, the data sources, test cases used, and the block containing that report transaction. Using these information, we can collect validators, test case and data source owners involved in a specific block to reward them. Only those creating reports are able to receive the rewards. 
+The validators can actively participate in executing the oracle scripts to receive 60% of the rewards by publishing reports. A report contains information of the validator that created it, the data sources, test cases used, and the block containing that report transaction. Using these information, we can collect validators, test case and data source owners involved in a specific block to reward them. Only those creating reports are able to receive the rewards. The formulas are similar to those in the first way with only minor changes:
+
+**(1) reward mulitplier = 1 - community tax * 2**
+
+The reason is that we need to allocate rewards to a lot of individuals, so validators should not get rewarded too much
+
+**(2) a validator's reward = total fee * 60% * reward multiplier * power fraction**
+
+**(3) fraction of endpoints / test cases = 0.01**
+
+**(4) endpoint owners / test case owners reward = total fee * 60% * reward multiplier * fraction**
+
+After the second way is applied, if there are any fees left in the fee collector, they will be allocated accordingly using the first way. However, the network only applies the first way when no reports are set after committing a block.

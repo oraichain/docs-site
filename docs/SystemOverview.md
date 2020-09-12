@@ -26,3 +26,50 @@ Compared to Band Protocol and Chainlink, API testing based test cases is the uni
 Another interesting feature is that the Oraichain community has the power to rate the validators’ reputation for quality AI APIs improvement. If a validator has bad behavior, such as failing to perform test cases and validate AI providers, slow response time, and low availability, its holding token will be slashed.
 
 Nevertheless, validators in Oraichain is responsible for performing many important tasks and could be a centralized point. Therefore, the number of chosen validators should be high in order to increase request performance, scalability, and high availability. Meanwhile, because we need many validators to participate in the Oraichain network and maintain their quality work, block reward and transaction fees must be applied for such validators to earn more ORAI tokens.
+
+
+Specifically, there are two ways to incentivize validators as well as test case, data source providers. 
+
+### First way
+
+The validators that participate in the network can receive rewards after each block having transaction fees. Indeed, the validator proposing the block, which is called a proposer, collect a bonus reward for its helpful job of committing a block. The formulas are described below:
+
+**(0) Propose multiplier = (base proposer reward + bonus proposer reward * (sum of precommit voting power / total voting power))**
+
+where **base proposer reward** is the base percentage of how much the proposer receives the reward; bonus proposer reward is the percentage for the amount of precommit voting power that the proposer has successfully collected when before committing a block. The current values are 1% and 4% respectively, so the maximum value of the propose multiplier is 5% or 0.05
+
+**(1) Proposer reward (bonus) = Propose multiplier * total fees within a block**
+
+**(2) Remaining = Remaining - (1)**
+
+**(3) vote multiplier = 1 - community tax - propose multiplier** 
+
+while the community tax is set to be 2% or 0.02
+
+**(4) power fraction = voting power / total voting power**
+
+**(5) a validator's reward = total fee * reward multiplier * power fraction**
+
+**(6) remaining = remaining - reward for each validator**
+
+the loop goes on until all validators have received their rewards.
+
+**(7) The remaining reward is sent into the community pool, where it can be used to send to an abritary orai account.**
+
+**Note**: The actual number of ORAI coins that a validator collect is the commission of the received reward. This figure is configured by each validator, and by default it is 0.1. The minimum gas price, on the other hand, must explicitly set in order to charge fees for each transaction. In addition, the tokens are allocated proportionally to the voting power. As a result, validators with more coins staked will receive more rewards.
+
+### Second way
+
+The validators can actively participate in executing the oracle scripts to receive 60% of the rewards by publishing reports. A report contains information of the validator that created it, the data sources, test cases used, and the block containing that report transaction. Using these information, we can collect validators, test case and data source owners involved in a specific block to reward them. Only those creating reports are able to receive the rewards. The formulas are similar to those in the first way with only minor changes:
+
+**(1) reward mulitplier = 1 - community tax * 2**
+
+The reason is that we need to allocate rewards to a lot of individuals, so validators should not get rewarded too much
+
+**(2) a validator's reward = total fee * 60% * reward multiplier * power fraction**
+
+**(3) fraction of endpoints / test cases = 0.01**
+
+**(4) endpoint owners / test case owners reward = total fee * 60% * reward multiplier * fraction**
+
+After the second way is applied, if there are any fees left in the fee collector, they will be allocated accordingly using the first way. However, the network only applies the first way when no reports are set after committing a block.

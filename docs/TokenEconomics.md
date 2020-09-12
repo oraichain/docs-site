@@ -8,24 +8,24 @@ When we call **ORAI**, it means that it is native ORAI tokens created and contai
 ## Key metrics
 | Token Name                 | ORAI                          |
 |----------------------------|-------------------------------|
-| Token Type                 | ERC-20 (and native after mainnet launch)                      |
-|Seed Sale Round|
+| Token Type                 | ERC20 (and native after mainnet launch)                      |
+|**Seed Sale Round**||
 | Amount Raised Seed Sale    | $70,000                       |
-| Seed Sale Token Price      | Each 8,600 ERC20-ORAI = $700             |
+| Seed Sale Token Price      | Each ERC20-ORAI = $0.081       |
 | Seed Sale Allocation       | 860,000 ERC20-ORAI (1.00%)           |
-| Seed Sale Date             | 24th~30th September 2020      |
-| Locked time                | 0.25% unlocked, 0.75% vesting over three months      |
-|Private Sale Round||
-| Amount Raised Private Sale | $1,000,000                    |
-| Private Sale Token Price   | Each 1,000,000 ERC20-ORAI = $100,000         |
+| Seed Sale Date             | 25th~30th September 2020      |
+| Locked time                | 0.25% unlocked, 0.75% locked until public sale      |
+|**Private Sale Round**||
+| Amount Raised Private Sale | $5,000,000                    |
+| Private Sale Token Price   | Each ERC20-ORAI ~= $0.5         |
 | Private Sale Allocation    | 10,000,000 ERC20-ORAI (11.63%)  |
-| Private Sale Date          | November to December 2020     |
-| Locked time                | Until mainnet launch      |
-|LaunchPad||
-| LaunchPad Allocation       | TBD                           |
-| LaunchPad Sale Token Price | 11,180,000 ERC20-ORAI (13.00%)         |
-| LaunchPad Sale Date        | 15th January 2021             |
-| Initial Circulating Supply | 860,000 (1.00%)           |
+| Private Sale Date          | October to December 2020     |
+| Locked time                | 5.82% locked until mainnet launch, 5.82% locked over one year      |
+|**Public Sale Round**||
+| Public Sale Token Price       | TBD                           |
+| Public Sale Allocation | 11,180,000 ERC20-ORAI (13.00%)         |
+| Public Sale Date        | January 2021             |
+| Initial Circulating Supply | 215,000 (0.25%)           |
 | Total Token Supply         | 86,000,000 ERC20-ORAI               |
 
 ## ORAI token distribution (%)
@@ -40,22 +40,29 @@ When we call **ORAI**, it means that it is native ORAI tokens created and contai
 
 Figure here!
 
+Foundation tokens are used to fund critical development of Oraichain-related technologies and provide financial support to projects and entities within the Oraichain community, in order to accelerate the growth of the ecosystem.
+Ecosystem tokens will be incentives for Validators, AI Providers, and Testcase Providers.
+
 **ORAI token release schedule (%)**
 
-All team, advisors, and private sale investors' tokens are locked until mainnet launch.
+All team, advisors, and private sale investors' tokens are locked at least after the mainnet launch.
 Therefore, no founders, team members, advisors, or investors in the private sale round will be able to sell ERC20-ORAI tokens on any secondary market at the time of listing or any time prior to the mainnet launch.
 We think it is very important to set up the incentives properly for our team and early supporters in the seed sale round.
+- 75% of seed sale tokens are locked until public sale.
+- 50% of private sale tokens are locked for 1 year.
+- 50% of team tokens are locked in 5 years.
+- 30% of advisor tokens are locked in 5 years.
 
 Figure here!
 
 ## Token governance and use of funds
-Funds raised in Seed and Private rounds will be spent according to the following allocations:
-- 60% technical and business development.
-- 20% marketing.
-- 10% operation.
-- 10% legal and audit fee.
+Funds raised in the seed and private rounds will be spent according to the following allocations:
+- 60% technical and business development
+- 20% marketing
+- 10% operation
+- 10% legal and audit fee
 
-Funds are raised in ETH and then they are converted to stable coins in order to avoid crypto price’s volatility risk. ETH and stable coins are store in multi-signature wallets that require at least 3 out of 4 signatures from ORAI founders.
+Funds are raised in ETH or fiat and then they are converted to stable coins in order to avoid crypto price’s volatility risk. ETH and stable coins are store in multi-signature wallets that require at least 3 out of 4 signatures from Oraichain founders.
 
 ## ORAI token utility
 When ORAI mainnet is officially launched, the ORAI token is required to secure and power the decentralized oracle network of validators. The native ORAI token is used in different scenarios below:
@@ -80,7 +87,7 @@ The ORAI token is rewarded for each newly created block. The number of rewarded 
 ### ERC20-ORAI token and ORAI token (native)
 There is a mechanism to synchronize ORAI tokens on the Oraichain network and ERC20-ORAI tokens on the Ethereum network. We will announce a conversion bridge later before the mainnet launch.
 
-### Inflation, staking, and Slashing
+### Inflation, staking, and slashing
 In order to keep the value of ORAI token, holders must stake their token to the Oraichain network. The rewarding token is divided based on the number of tokens that a holder is staking to a validator.
 
 Slashing is a mechanism to punish bad behavior of validators in aspects of AI API quality, response time, and availability.

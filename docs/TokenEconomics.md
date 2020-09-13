@@ -16,8 +16,8 @@ When we call **ORAI**, it means that it is native ORAI tokens created and contai
 | Seed Sale Date             | 25th~30th September 2020      |
 | Locked time                | 0.25% unlocked, 0.75% locked until public sale      |
 |**Private Sale Round**||
-| Amount Raised Private Sale | $5,000,000                    |
-| Private Sale Token Price   | Each ERC20-ORAI ~= $0.5         |
+| Amount Raised Private Sale | $3,000,000                    |
+| Private Sale Token Price   | Each ERC20-ORAI ~= $0.3         |
 | Private Sale Allocation    | 10,000,000 ERC20-ORAI (11.63%)  |
 | Private Sale Date          | October to December 2020     |
 | Locked time                | 5.82% locked until mainnet launch, 5.82% locked over one year      |

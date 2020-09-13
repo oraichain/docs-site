@@ -24,7 +24,9 @@ Cần viết lại theo văn của mình
 When registering the data source, the message sender can choose whether to specify an AI provider of the source. If an AI provider is specified, only the AI provider can make any changes to the data source once it is registered. They will also be the only party able to collect the accumulated request fees. On the other hand, if an AI provider is omitted, the data source can no longer be edited after it is registered. Note that the sender who creates the data source and the AI provider of the data source does not need to be the same.
 ```
 
-### Oracle Scripts
+### Testcase Provider
+
+### Oracle Script
 
 Khi một ai đó yêu cầu dữ liệu từ Oraichain's oracle, họ gọi đến một trong các Oracle Script có sẵn trên Oraichain.  Một Oracle Script là một đoạn chương trình sẽ gọi đến các nguồn dữ liệu khác để lấy dữ liệu thô về sau đó thực hiện các testcase do người request gửi tới tương ứng với các nguồn dữ liệu đó. Nếu nguồn dữ liệu nào thoả mãn sẽ được chuyển sang phase 2 là tổng hợp các dữ liệu đó và trả về cho người yêu cầu. Sau đó thông tin về dữ liệu đó sẽ được lưu trữ trên Oraichain để có thể sử dụng và xác thực sau này. Nguồn dữ liệu nói đến ở đây có thể là các AI Dato Source hoặc là các Oracle Script khác.
 
@@ -46,4 +48,3 @@ The second phase then aggregates all of the data reports returned by the validat
 ### Validator
 
 Thực hiện đóng block và validator dữ liệu từ các AI provoder. Validator sẽ chịu tránh nghiệm cho dữ liệu được họ cung cấp. Họ sẽ thực hiện nhiệm vụ chạy testcase được cung cấp bởi người dùng và nhận incentive.
-

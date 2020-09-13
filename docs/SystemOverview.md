@@ -11,9 +11,9 @@ The ORAI consensus protocol is similar to the delegated proof-of-stake (DPoS). I
 
 The second task of the validators is to collect data from AI providers and validate that data before they are written to the blockchain. To validate an AI API, validators will do testing based on the test cases given by users, smart contracts, and test providers. If users do not know which test case is good, they can request some test cases from test providers.
 
-### AI API providers
+### AI providers
 
-### Test Providers
+### Testcase Providers
 
 ## System Architecture
 ![Oraichain’s System Overview](./../static/img/Oraichain_request_data_flow.jpg)

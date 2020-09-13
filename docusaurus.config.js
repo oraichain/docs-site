@@ -5,8 +5,8 @@ module.exports = {
   baseUrl: '/',
   onBrokenLinks: 'throw',
   favicon: 'img/favicon.ico',
-  organizationName: 'oraichain', 
-  projectName: 'docs-site', 
+  organizationName: 'oraichain',
+  projectName: 'docs-site',
   themeConfig: {
     navbar: {
       title: 'Oraichain',
@@ -27,7 +27,7 @@ module.exports = {
     footer: {
       style: 'dark',
       links: [
-        
+
         {
           title: 'Community',
           items: [
@@ -50,7 +50,7 @@ module.exports = {
             },
             {
               label: 'GitHub',
-              href: 'https://github.com',
+              href: 'https://github.com/oraichain',
             },
           ],
         },

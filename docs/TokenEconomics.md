@@ -38,7 +38,7 @@ When we call **ORAI**, it means that it is native ORAI tokens created and contai
 - Advisors comprise 7.00% of the total token supply.
 - Foundation comprises 20.00% of the total token supply.
 
-Figure here!
+![Token allocation](./../static/img/token-allocation.png)
 
 Foundation tokens are used to fund critical development of Oraichain-related technologies and provide financial support to projects and entities within the Oraichain community, in order to accelerate the growth of the ecosystem.
 Ecosystem tokens will be incentives for Validators, AI Providers, and Testcase Providers.
@@ -53,7 +53,7 @@ We think it is very important to set up the incentives properly for our team and
 - 50% of team tokens are locked in 5 years.
 - 30% of advisor tokens are locked in 5 years.
 
-Figure here!
+![Token Release Schedule](./../static/img/token-release-schedule.png)
 
 ## Token governance and use of funds
 Funds raised in the seed and private rounds will be spent according to the following allocations:
@@ -77,12 +77,14 @@ The token plays a role as transaction fee that is paid for parties as follows:
 - Testcase providers
 - Block-creating validators.
 
-Transaction fee is different depending on fee requirement of request-executing validators, AI-API providers, and test-case providers. Transaction fee should be explicitly defined in [MsgRequestData](ProtocolMessages#msgrequestdata) of a request. When a request comes, request-executing validators must decide if they want to execute it. After that, a random validator is chosen from the willing request-executing validators. The chosen validator will execute the oracle script and create MsgResultReport in the end. The validator must clarify the fee paid to AI-API providers, test-case providers, and block-creating validators in the MsgResultReport.
+The transaction fee is different depending on the fee requirement of request-executing validators, AI-API providers, and test-case providers. The transaction fee should be explicitly defined in MsgRequestData of a request. When a request comes, request-executing validators must decide if they want to execute it. After that, a random validator, which is responsible for proposing a block, is chosen from the willing request-executing validators. The chosen validator will execute the oracle script before firing an event to those request-executing validators.
 
-If there are more than one validator asked in the MsgRequestData (AskCount), the transaction fee is divided equally for each validator. The request-executing validators must decide if they accept such transaction fee.
+After that, these validators interact with test cases and AI APIs to create a MsgResultReport in the end. A report contains information on the validator that created it, the data sources, test cases used, and the block containing that report transaction. Using this information, we can collect validators, test case owners, and data source owners involved in a specific block to reward them. Only those creating reports are able to receive the rewards. If there is more than one validator asked in the MsgRequestData (AskCount), the transaction fee is divided proportionally to the voting power of each validator.
 
 ### How ORAI token is mined
-The ORAI token is rewarded for each newly created block. The number of rewarded ORAI tokens will be decided later before the mainnet launch. In the Oraichain network, validators are responsible for creating new blocks and a random validator is chosen to do that. In order to become a validator, one needs enough ORAI tokens that are staked or delegated.
+There are two ways for miners to mine ORAI tokens. The first way is that the ORAI token is rewarded for each newly created block. The number of rewarded ORAI tokens will be decided later before the mainnet launch. In the Oraichain network, validators are responsible for creating new blocks and a random validator is chosen to do that. In order to become a validator, one needs enough ORAI tokens that are staked or delegated. Note that new ORAI tokens are only mined when a block contains one or more transactions with transaction fees. Such fees will be converted into tokens in the form of rewards for the validators.
+
+The second way is briefly described above, in which the request-executing validators can earn some extra ORAI tokens by executing test cases and data sources. Similar to the first way, 60% of the total transaction fee is extracted as a reward for the first three parties mentioned earlier. The remaining 40% is saved to reward validators for the newly committed block. Nevertheless, this second way only occurs when there is at least a MsgResultReport broadcast to the Oraichain network at the end of a block.
 
 ### ERC20-ORAI token and ORAI token (native)
 There is a mechanism to synchronize ORAI tokens on the Oraichain network and ERC20-ORAI tokens on the Ethereum network. We will announce a conversion bridge later before the mainnet launch.

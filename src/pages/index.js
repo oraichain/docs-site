@@ -9,7 +9,7 @@ import styles from "./styles.module.css";
 const features = [
   {
     title: <>Oracle AI</>,
-    imageUrl: "img/undraw_docusaurus_mountain.svg",
+    imageUrl: "img/growth-strategy.svg",
     description: (
       <>
         Oraichain enables smart contracts to securely access external AI APIs.
@@ -19,7 +19,7 @@ const features = [
   },
   {
     title: <>AI marketplace </>,
-    imageUrl: "img/undraw_docusaurus_tree.svg",
+    imageUrl: "img/integrated-marketing.svg",
     description: (
       <>
         Search, trial, and select from an ever-growing library of AI algorithms
@@ -30,7 +30,7 @@ const features = [
   },
   {
     title: <>AI Publisher </>,
-    imageUrl: "img/undraw_docusaurus_react.svg",
+    imageUrl: "img/design-development.svg",
     description: (
       <>
         Our publishing infrastructure provides both a central hub for creating,
@@ -41,7 +41,7 @@ const features = [
   },
   {
     title: <>ORAI Staking </>,
-    imageUrl: "img/undraw_docusaurus_react.svg",
+    imageUrl: "img/digital-strategy.svg",
     description: (
       <>
         Earn more while holding ORAI tokens by vesting them in 30-day staking
@@ -53,7 +53,7 @@ const features = [
   },
   {
     title: <>Request for AI </>,
-    imageUrl: "img/undraw_docusaurus_react.svg",
+    imageUrl: "img/digital-marketing.svg",
     description: (
       <>
         The Request for AI portal (RFAI): A community crowdsource portal
@@ -64,7 +64,7 @@ const features = [
   },
   {
     title: <>ORAI DAO</>,
-    imageUrl: "img/undraw_docusaurus_react.svg",
+    imageUrl: "img/saving-strategy.svg",
     description: (
       <>
         You are the governor of the product serving you. Oraichain is of, for,
@@ -79,7 +79,7 @@ function Feature({ imageUrl, title, description }) {
   return (
     <div className={clsx("col col--4", styles.feature)}>
       {imgUrl && (
-        <div className="text--center">
+        <div className="">
           <img className={styles.featureImage} src={imgUrl} alt={title} />
         </div>
       )}

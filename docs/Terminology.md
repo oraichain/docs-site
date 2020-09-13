@@ -7,24 +7,33 @@ title: Terminology
 
 ### AI Provider
 
-AI Provider là tác nhân tham gia vào hệ thống để cung cấp AI Data Source. AI Provider sẽ nhận được incentive khi có yêu cầu sử dụng AI Data Source do họ cung cấp theo một tỷ lệ được định nghĩa trong message `MsgCreateAIDataSource`
+AI Provider là tác nhân cung cấp AI Data Source cho hệ thống Oraichain. AI Provider sẽ nhận được incentive khi có yêu cầu sử dụng AI Data Source do họ cung cấp theo một tỷ lệ được định nghĩa trong message `MsgCreateAIDataSource`. Trong hệ thống Oraichain bất kỳ ai cũng có thể trở thành AI Provider.
 
 ### AI Data Source
 
 AI Data Source là thành phần cơ bản trong hệ thống Oraichain. Nó miêu tả cách có thể lấy dữ liệu từ các AI model. Trong Oraichain, AI Data Source có thể được đăng ký bởi AI Provider. Việc đăng ký được thực hiện thông qua gửi `MsgCreateAIDataSource` tới hệ thống. Trong thông điệp đăng ký AI Data Source, AI Provider sẽ đặc tả một số tham số của AI Data Source gồm:
 
-- the owner who wish to create the data source và là người mà sẽ nhận incentive khi có yêu cầu gọi đến AI Data Source
-- the name of the  AI data source
+- the owner người sẽ tạo ra AI Provider và cũng chính là người sẽ được nhận incentive từ việc người khác sử dụng AI data source
+- the name: Tên của ai data source  giúp gợi nhớ.
 - Phí giao dịch mà người yêu cầu cần trả cho việc yêu cầu dữ liệu.
-- the content of the executable to be run by block validators upon receiving a data request for this data source
+- mã thực thi: đoạn mã thực thi mà sẽ được thực hiện bởi validator khi nhận được yêu cầu tới data source đó
 
-
-Cần viết lại theo văn của mình
-```
-When registering the data source, the message sender can choose whether to specify an AI provider of the source. If an AI provider is specified, only the AI provider can make any changes to the data source once it is registered. They will also be the only party able to collect the accumulated request fees. On the other hand, if an AI provider is omitted, the data source can no longer be edited after it is registered. Note that the sender who creates the data source and the AI provider of the data source does not need to be the same.
-```
+Dựa vào message để tạo ai data source ta có thể thấy rõ chủ sở hữu của data source. đó sẽ là người có thể thực hiện các cập nhật liên quan đến data source đó. Người này cũng sẽ là người được nhận được thưởng từ việc những người khác sử dụng ai data source đó.
 
 ### Testcase Provider
+
+Testcase Provider là tác nhân cung cấp AI testcase cho hệ thống Oraichain. Testcase Provider sẽ nhận được incentive khi có yêu cầu sử dụng testcase do họ cung cấp theo một tỷ lệ được định nghĩa trong message `MsgCreateAITestcase`. Trong hệ thống Oraichain bất kỳ ai cũng có thể trở thành testcase provider.
+
+### AI testcase
+
+AI testcase là một trong các thành phần cơ bản trong hệ thống Oraichain. Nó bao gồm một tập các dữ liệu input và output đã được mã hoá để đảm bảo quyền riêng tư. Các tập input và output này sẽ được các Oracle Script chỉ định để thực hiện kiểm tra độ tin cậy  của AI data source trước khi thực hiện yêu cầu. Việc đăng ký được thực hiện thông qua gửi `MsgCreateAITestCase` tới hệ thống. Trong thông điệp đăng ký AI testcase, testcase provider sẽ đặc tả một số tham số của testcase gồm:
+
+- the owner người sẽ tạo ra testcase và cũng chính là người sẽ được nhận incentive từ việc người khác sử dụng AI data source
+- the name: Tên của testcase  giúp gợi nhớ.
+- Phí giao dịch mà người yêu cầu cần trả cho việc sử dụng testcase.
+- tập dữ liệu: tập input và output đã được mã hoá.
+  
+Cũng giống như ai data source, ai test case cũng được sở hữu bởi một người và người đó có quyền cập nhật testcase cũng như nhận thưởng từ việc người khác sử dụng testcase.
 
 ### Oracle Script
 
@@ -38,13 +47,6 @@ To create an oracle script, the creator must broadcast a `MsgCreateOracleScript`
 - the URL for the source code of this oracle script
 
 
-Similar to data sources, the sender who wishes to create the oracle script does not have to be the same as the owner of the oracle script specified in the message.
-
-The execution flow of an oracle script can be broken down into two phases. In the first phase, the script outlines the data sources that are required for its execution. It then sends out a request to the chain's validators to retrieve the result from the required data sources and then executes testcase from request user. The contents of this consists of the data sources' execution steps and the associated parameters.
-
-The second phase then aggregates all of the data reports returned by the validators, with each report containing the values the validator received from the required data sources. The script then proceeds to combine those values into a single final result
-
-
 ### Validator
 
-Thực hiện đóng block và validator dữ liệu từ các AI provoder. Validator sẽ chịu tránh nghiệm cho dữ liệu được họ cung cấp. Họ sẽ thực hiện nhiệm vụ chạy testcase được cung cấp bởi người dùng và nhận incentive.
+Validator là tác nhân tham gia vào hệ thống oraichain, thực hiện việc đóng block và validator dữ liệu từ các AI provider. Validator sẽ là người thực hiện việc chạy các testcase kiếm tra tính chính xác của testcase. Nếu testcase thoả mãn điều kiện trong oracle script  thì validator sẽ thực hiện tổng hợp dữ liệu từ ai data source. Validator sẽ nhận được phần thưởng chi việc chaỵ testcase và data source. Ngoài ra validator sẽ phải chịu tránh nghiêmk cho dữ liệu đã được họ thu thập và validator từ người dùng. Do dó để trở thành validator sẽ cần stake một lượng ORAI để đảm bảo độ tin cậy.

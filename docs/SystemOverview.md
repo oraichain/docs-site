@@ -6,14 +6,9 @@ title: System Overview
 Oraichain is a public blockchain that allows users to create different data requests. Instead of users, smart contracts can also request data securely from AI APIs through Oraichain. The blockchain network is built based on [Cosmos SDK](https://cosmos.network/) along with [Terdemint](https://tendermint.com/)’s [Byzantine Fault Tolerance](https://en.wikipedia.org/wiki/Byzantine_fault) consensus that helps speed up transactions’ confirmation time.
 
 ## Network Participants
-### Validators
 The ORAI consensus protocol is similar to the delegated proof-of-stake (DPoS). Indeed, the network consists of numerous validators, each owning ORAI tokens while other ORAI token holders can be delegators staking their tokens to validators and get rewards for each newly created block.
 
 The second task of the validators is to collect data from AI providers and validate that data before they are written to the blockchain. To validate an AI API, validators will do testing based on the test cases given by users, smart contracts, and test providers. If users do not know which test case is good, they can request some test cases from test providers.
-
-### AI providers
-
-### Testcase Providers
 
 ## System Architecture
 ![Oraichain’s System Overview](./../static/img/Oraichain_request_data_flow.jpg)
@@ -28,7 +23,7 @@ Another interesting feature is that the Oraichain community has the power to rat
 Nevertheless, validators in Oraichain is responsible for performing many important tasks and could be a centralized point. Therefore, the number of chosen validators should be high in order to increase request performance, scalability, and high availability. Meanwhile, because we need many validators to participate in the Oraichain network and maintain their quality work, block reward and transaction fees must be applied for such validators to earn more ORAI tokens.
 
 
-Specifically, there are two ways to incentivize validators as well as test case, data source providers. 
+Specifically, there are two ways to incentivize validators as well as test case, data source providers.
 
 ### First way
 
@@ -42,7 +37,7 @@ where **base proposer reward** is the base percentage of how much the proposer r
 
 **(2) Remaining = Remaining - (1)**
 
-**(3) vote multiplier = 1 - community tax - propose multiplier** 
+**(3) vote multiplier = 1 - community tax - propose multiplier**
 
 while the community tax is set to be 2% or 0.02
 

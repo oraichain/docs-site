@@ -3,18 +3,16 @@ id: ProtocolMessages
 title: Protocol Messages
 ---
 
-## Protocol Messages
+## Native Cosmos SDK Messages
+Stemming from its Cosmos SDK foundation, Oraichain supports all types of messages that are native to the SDK.
 
-### Native Cosmos SDK Messages
-Stemming from its Cosmos SDK foundation, Oraichain supports all types of messages that are native to the SDK
-
-### Oraichain Specific Messages
+## Oraichain Specific Messages
 
 Apart from the messages that stems from the Cosmos SDK, Oraichain also supports a number of messages native to its a ai data oracle system. These messages' specification is presented below.
 
-#### MsgCreateAIDataSource
+### MsgCreateAIDataSource
 
-Deploys and registers a new ai data source to Oraichain. Once registered, the data source is assigned a unique `int64` identifier which can be used to refer to it forever.
+Deploying and registering a new AI data source to Oraichain. Once registered, the data source is assigned a unique `int64` identifier which can be used to refer to it forever.
 
 Parameter | Type | Description
 ---------|----------|---------
@@ -25,7 +23,7 @@ Source Code URL | `string` | The URL for the source code of this data source
 
 ### MsgEditAIDataSource
 
-Edits an existing data source given the unique `int64` identifier (i.e. dataSourceID). 
+Editing an existing data source given the unique `int64` identifier (i.e. dataSourceID).
 
 Parameter | Type | Description
 ---------|----------|---------
@@ -46,7 +44,7 @@ Name | `string` | The human-readable string name for this data source
 
 ### MsgCreateOracleScript
 
-Deploys a new oracle script to Oraichain's network. Once registered, the script is assigned a unique `int64` identifier which can be used to refer to it forever.
+Deploying a new oracle script to Oraichain's network. Once registered, the script is assigned a unique `int64` identifier which can be used to refer to it forever.
 
 Parameter | Type | Description
 ---------|----------|---------
@@ -58,7 +56,7 @@ Source Code URL	| `string`| The URL for the source code of this oracle script
 
 ### MsgEditOracleScript
 
-Edits an existing oracle script given the unique `int64` identifier (i.e. oracleScriptID). The sender must be the owner of the oracle script for the transaction to succeed.
+Editing an existing oracle script given the unique `int64` identifier (i.e. oracleScriptID). The sender must be the owner of the oracle script for the transaction to succeed.
 
 Parameter | Type | Description
 ---------|----------|---------
@@ -100,7 +98,7 @@ Description | `string` | The description of this data source
 Schema | `string` | The schema detailing the inputs and outputs of this testcase, as well as the corresponding types
 Source URL	| `string`| The URL for the source code of this oracle script
 
-Ví dụ schema: 
+Ví dụ schema:
 ```json
 {
     "inputs":{
@@ -121,7 +119,7 @@ Ví dụ schema:
             "examples": [
                 "Cris"
             ]
-        }, 
+        },
         "age": {
             "type": "int64",
             "title": "age",
@@ -129,7 +127,7 @@ Ví dụ schema:
             "examples": [
                 12
             ]
-        }, 
+        },
     }
 }
 ```
@@ -168,7 +166,7 @@ MinCount | `int64` | The minimum number of validators necessary for the request 
 RequestID | `string` | the unique identifier of this oracle request, as specified by the client. This same unique ID will be sent back to the requester with the oracle response.
 fee | `int64` | transaction fee
 
-Ví dụ Requestdata: 
+Ví dụ Requestdata:
 ```json
 {
     "testcase":[

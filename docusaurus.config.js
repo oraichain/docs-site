@@ -12,7 +12,7 @@ module.exports = {
       title: 'Oraichain',
       logo: {
         alt: 'Oraichain Logo',
-        src: 'img/logo.svg',
+        src: 'img/favicon.ico',
       },
       items: [
         {

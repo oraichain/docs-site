@@ -116,15 +116,15 @@ Ví dụ schema:
     "outputs":{
        "name": {
             "type": "string",
-            "title": "Tên trên chứng minh thư nhân dân",
+            "title": "name",
             "default": "",
             "examples": [
-                "Nguyen Van A"
+                "Cris"
             ]
         }, 
         "age": {
             "type": "int64",
-            "title": "Tuổi",
+            "title": "age",
             "default": "",
             "examples": [
                 12
@@ -177,7 +177,7 @@ Ví dụ Requestdata:
                 "image": "https://gateway.datochain.com/ipfs/QmdXBX8KJw3nkXgJe1NFrSGckWETnREdVQPS94BBkogKE7"
             },
             "expectedOutput":{
-                "name":"Nguyen Van A",
+                "name":"Cris",
                 "age":22
             }
         },
@@ -186,7 +186,7 @@ Ví dụ Requestdata:
                 "image": "https://gateway.datochain.com/ipfs/QmdXBX8KJw3nkXgJe1NFrSGckWETnREdVQPS94BBkogKE7"
             },
             "expectedOutput":{
-                "name":"Nguyen Van A",
+                "name":"Cris",
                 "age":22
             }
         }
@@ -196,7 +196,7 @@ Ví dụ Requestdata:
                 "image": "https://gateway.datochain.com/ipfs/QmdXBX8KJw3nkXgJe1NFrSGckWETnREdVQPS94BBkogKE7"
             },
             "expectedOutput":{
-                "name":"Nguyen Van A",
+                "name":"Cris",
                 "age":22
             }
         }

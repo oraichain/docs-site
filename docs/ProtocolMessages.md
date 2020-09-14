@@ -3,16 +3,15 @@ id: ProtocolMessages
 title: Protocol Messages
 ---
 
-## Native Cosmos SDK Messages
-Stemming from its Cosmos SDK foundation, Oraichain supports all types of messages that are native to the SDK.
+## Cosmos SDK Messages
+Since the Oraichain blockchain is built from the Cosmos network, it also supports all message types of Cosmos SDK.
 
-## Oraichain Specific Messages
-
-Apart from the messages that stems from the Cosmos SDK, Oraichain also supports a number of messages native to its a ai data oracle system. These messages' specification is presented below.
+## Oraichain Messages
+In order to support validators running oracle scripts, AI Data Source, and AI Testcase, there are other message types implemented on Oraichain as follows:
 
 ### MsgCreateAIDataSource
-
-Deploying and registering a new AI data source to Oraichain. Once registered, the data source is assigned a unique `int64` identifier which can be used to refer to it forever.
+This message is used to create a new AI data source to Oraichain.
+Each data source will have a unique identifier (`int64`) that can be referenced from oracle scripts.
 
 Parameter | Type | Description
 ---------|----------|---------
@@ -43,8 +42,8 @@ Owner | `sdk.AccAddress` | The address of the entity who will be responsible for
 Name | `string` | The human-readable string name for this data source
 
 ### MsgCreateOracleScript
-
-Deploying a new oracle script to Oraichain's network. Once registered, the script is assigned a unique `int64` identifier which can be used to refer to it forever.
+This message is used to create a new oracle script to the Oraichain network.
+Each oracle script will have a unique identifier (`int64`) that can be referenced from users' requests.
 
 Parameter | Type | Description
 ---------|----------|---------
@@ -56,7 +55,8 @@ Source Code URL	| `string`| The URL for the source code of this oracle script
 
 ### MsgEditOracleScript
 
-Editing an existing oracle script given the unique `int64` identifier (i.e. oracleScriptID). The sender must be the owner of the oracle script for the transaction to succeed.
+Editing an existing oracle script given the unique `int64` identifier (i.e. oracleScriptID).
+In order to edit the oracle script, the sender must be the owner.
 
 Parameter | Type | Description
 ---------|----------|---------
@@ -98,7 +98,7 @@ Description | `string` | The description of this data source
 Schema | `string` | The schema detailing the inputs and outputs of this testcase, as well as the corresponding types
 Source URL	| `string`| The URL for the source code of this oracle script
 
-Ví dụ schema:
+Schema example:
 ```json
 {
     "inputs":{
@@ -153,8 +153,7 @@ Owner | `sdk.AccAddress` | The address of the entity who will be responsible for
 Name | `string` | The human-readable string name for this the testcase
 
 ### MsgRequestData
-
-Requests a new data based on an existing oracle script. A data request will be assigned a unique identifier once the transaction is confirmed. After sufficient validators report the raw data points. The results of the data requests will be written and stored permanently on Oraichain for future uses.
+Users or smart contracts are based on existing oracle scripts in order to create new requests to the Oraichain network. Each request will have a unique identifier. After validators return results, they are written permanently to Oraichain.
 
 Parameter | Type | Description
 ---------|----------|---------
@@ -166,7 +165,7 @@ MinCount | `int64` | The minimum number of validators necessary for the request 
 RequestID | `string` | the unique identifier of this oracle request, as specified by the client. This same unique ID will be sent back to the requester with the oracle response.
 fee | `int64` | transaction fee
 
-Ví dụ Requestdata:
+Requestdata example:
 ```json
 {
     "testcase":[

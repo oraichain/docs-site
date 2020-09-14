@@ -60,7 +60,7 @@ the loop goes on until all validators have received their rewards.
 
 ### Second way
 
-The validators can actively participate in executing the oracle scripts to receive 60% of the rewards by publishing reports. A report contains information of the validator that created it, the data sources, test cases used, and the block containing that report transaction. Using these information, we can collect validators, test case and data source owners involved in a specific block to reward them. Only those creating reports are able to receive the rewards. The formulas are similar to those in the first way with only minor changes:
+The validators can actively participate in executing the oracle scripts to receive 60% of the rewards by publishing reports. A report contains information on the validator that created it, the data sources, test cases used, and the block containing that report transaction. Using this information, we can collect validators, test case owners, and data source owners involved in a specific block to reward them. Only those creating reports are able to receive the rewards. The formulas are similar to those in the first way with only minor changes:
 
 **(1) reward mulitplier = 1 - community tax * 2**
 

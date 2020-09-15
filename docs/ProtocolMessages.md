@@ -3,10 +3,11 @@ id: ProtocolMessages
 title: Protocol Messages
 ---
 
-## Protocol Messages
+## Cosmos SDK Messages
+Since the Oraichain blockchain is built from the Cosmos network, it also supports all message types of Cosmos SDK.
 
-### Native Cosmos SDK Messages
-Stemming from its Cosmos SDK foundation, Oraichain supports all types of messages that are native to the SDK
+## Oraichain Messages
+In order to support validators running oracle scripts, AI Data Source, and AI Testcase, there are other message types implemented on Oraichain as follows:
 
 ### Oraichain Specific Messages
 
@@ -27,7 +28,7 @@ Fees | `string` | The transaction fee required to run this data source. Eg: 5000
 
 ### MsgEditAIDataSource
 
-Edits an existing data source given the unique identifier (i.e. dataSourceID). 
+Edits an existing data source given the unique identifier
 
 Parameter | Type | Description
 ---------|----------|---------
@@ -123,20 +124,20 @@ Fees | `string` | The transaction fee required to run this test case. Eg: 5000or
     "outputs":{
        "name": {
             "type": "string",
-            "title": "Tên trên chứng minh thư nhân dân",
+            "title": "name",
             "default": "",
             "examples": [
-                "Nguyen Van A"
+                "Cris"
             ]
-        }, 
+        },
         "age": {
             "type": "int64",
-            "title": "Tuổi",
+            "title": "age",
             "default": "",
             "examples": [
                 12
             ]
-        }, 
+        },
     }
 }
 ``` -->
@@ -176,7 +177,7 @@ MinCount | `int64` | The minimum number of validators necessary for the request 
 RequestID | `string` | the unique identifier of this oracle request, as specified by the client. This same unique ID will be sent back to the requester with the oracle response.
 fee | `int64` | transaction fee
 
-Ví dụ Requestdata: 
+Requestdata example:
 ```json
 {
     "testcase":[
@@ -185,7 +186,7 @@ Ví dụ Requestdata:
                 "image": "https://gateway.datochain.com/ipfs/QmdXBX8KJw3nkXgJe1NFrSGckWETnREdVQPS94BBkogKE7"
             },
             "expectedOutput":{
-                "name":"Nguyen Van A",
+                "name":"Cris",
                 "age":22
             }
         },
@@ -194,7 +195,7 @@ Ví dụ Requestdata:
                 "image": "https://gateway.datochain.com/ipfs/QmdXBX8KJw3nkXgJe1NFrSGckWETnREdVQPS94BBkogKE7"
             },
             "expectedOutput":{
-                "name":"Nguyen Van A",
+                "name":"Cris",
                 "age":22
             }
         }
@@ -204,7 +205,7 @@ Ví dụ Requestdata:
                 "image": "https://gateway.datochain.com/ipfs/QmdXBX8KJw3nkXgJe1NFrSGckWETnREdVQPS94BBkogKE7"
             },
             "expectedOutput":{
-                "name":"Nguyen Van A",
+                "name":"Cris",
                 "age":22
             }
         }

@@ -22,7 +22,6 @@ Parameter | Type | Description
  Owner | `sdk.AccAddress` | The address of the entity who will be responsible for maintaining the ai data source
  Name | `string` | The human-readable string name for this data source
 Description | `string` | The description of this data source
-<!-- Source Code URL | `string` | The URL for the source code of this data source -->
 Code | `[]byte` | The source code in bytes of this data source
 Fees | `string` | The transaction fee required to run this data source. Eg: 5000orai
 
@@ -58,8 +57,6 @@ Parameter | Type | Description
 Owner | `sdk.AccAddress` | The address of the entity who will be responsible for maintaining the Oracle Script
 Name | `string` | The human-readable string name for this data source
 Description | `string` | The description of this oracle script
-<!-- Schema | `string` | The schema detailing the inputs and outputs of this oracle script, as well as the corresponding types
-Source Code URL	| `string`| The URL for the source code of this oracle script -->
 Code | `[]byte` | The source code in bytes of this oracle script
 
 ### MsgEditOracleScript
@@ -72,8 +69,6 @@ OldName | `string` | The current unique identifier that the oracle script has
 NewName | `string` | The new unique identifier and also the new name that the oracle script is assigned to. If it is identical to the OldName, then the identifier is unchanged.
 Owner | `sdk.AccAddress` | The address of the entity who will be responsible for maintaining the Oracle Script
 Description | `string` | The description of this oracle script
-<!-- Schema | `string` | The schema detailing the inputs and outputs of this oracle script, as well as the corresponding types
-Source Code URL	| `string`| The URL for the source code of this testcase. -->
 Code | `[]byte` | The source code in bytes of this oracle script
 
 ### QueryResOracleScript
@@ -93,7 +88,6 @@ Parameter | Type | Description
  Owner | `sdk.AccAddress` | The address of the entity who will be responsible for maintaining the test case
  Name | `string` | The human-readable string name for this test case
 Description | `string` | The description of this test case
-<!-- Source Code URL | `string` | The URL for the source code of this data source -->
 Code | `[]byte` | The source code in bytes of this test case
 Fees | `string` | The transaction fee required to run this test case. Eg: 5000orai
 
@@ -107,51 +101,6 @@ Owner | `sdk.AccAddress` | The address of the entity who will be responsible for
 Description | `string` | The description of this test case
 Code | `[]byte` | The source code in bytes of this test case
 Fees | `string` | The transaction fee required to run this test case. Eg: 5000orai
-
-<!-- Ví dụ schema: 
-```json
-{
-    "inputs":{
-        "image": {
-            "type": "string",
-            "title": "The image url",
-            "default": "",
-            "examples": [
-                "https://gateway.datochain.com/ipfs/QmdXBX8KJw3nkXgJe1NFrSGckWETnREdVQPS94BBkogKE7"
-            ]
-        },
-    },
-    "outputs":{
-       "name": {
-            "type": "string",
-            "title": "name",
-            "default": "",
-            "examples": [
-                "Cris"
-            ]
-        },
-        "age": {
-            "type": "int64",
-            "title": "age",
-            "default": "",
-            "examples": [
-                12
-            ]
-        },
-    }
-}
-``` -->
-
-<!-- ### MsgExcuteTestCase
-
-Parameter | Type | Description
----------|----------|---------
-TestcaseId	| `int64` | he unique identifier number assigned to the testcase when it was first registered on Oraichain
-Owner | `sdk.AccAddress` | The address of the entity who will be responsible for maintaining the testcase
-Calldata | `string` | The data passed over to the the testcase for the script to use during its execution
-AskCount | `int64` | The number of validators that are requested to respond to this request
-MinCount | `int64` | The minimum number of validators necessary for the request to proceed to the execution phase
-RequestID | `string` | the unique identifier of this  request, as specified by the client. This same unique ID will be sent back to the requester with the  response. -->
 
 ### QueryResTestCase
 
@@ -167,51 +116,6 @@ Code | `string` | The source code in string of this test case
 
 Requests a new data based on an existing oracle script. A data request will be assigned a unique identifier with an AI request prefix once the transaction is confirmed. After sufficient validators report successfully. The results of the data requests will be written and stored permanently on Oraichain for future uses.
 
-<!-- Parameter | Type | Description
----------|----------|---------
-OracleScriptID	| `int64` | The unique identifier number assigned to the oracle script when it was first registered on Oraichain
-Sender | `sdk.AccAddress` | The address of the message's sender.
-Requestdata | `string` | The data passed over to the oracle script for the script to use during its execution
-AskCount | `int64` | The number of validators that are requested to respond to this request
-MinCount | `int64` | The minimum number of validators necessary for the request to proceed to the execution phase
-RequestID | `string` | the unique identifier of this oracle request, as specified by the client. This same unique ID will be sent back to the requester with the oracle response.
-fee | `int64` | transaction fee
-
-Requestdata example:
-```json
-{
-    "testcase":[
-        {
-            "inputs":{
-                "image": "https://gateway.datochain.com/ipfs/QmdXBX8KJw3nkXgJe1NFrSGckWETnREdVQPS94BBkogKE7"
-            },
-            "expectedOutput":{
-                "name":"Cris",
-                "age":22
-            }
-        },
-        {
-            "inputs":{
-                "image": "https://gateway.datochain.com/ipfs/QmdXBX8KJw3nkXgJe1NFrSGckWETnREdVQPS94BBkogKE7"
-            },
-            "expectedOutput":{
-                "name":"Cris",
-                "age":22
-            }
-        }
-    ],
-    "data":{
-            "inputs":{
-                "image": "https://gateway.datochain.com/ipfs/QmdXBX8KJw3nkXgJe1NFrSGckWETnREdVQPS94BBkogKE7"
-            },
-            "expectedOutput":{
-                "name":"Cris",
-                "age":22
-            }
-        }
-}
-``` -->
-
 Parameter | Type | Description
 ---------|----------|---------
 RequestID | `string` | the unique identifier of this oracle request, as specified by the client. This same unique ID will be sent back to the requester with the oracle response. This field is filled automatically, so the user does not need to care about this.
@@ -219,8 +123,6 @@ ContractName | `string` | The unique name identifier of the oracle script.
 Creator | `sdk.AccAddress` | The address of the message's sender or creator of this request.
 ImageHash | `string` | The image hash stored on IPFS. Each validator will collect the actual image using this hash to send to the AI data sources.
 ImageName | `string` | The image name to send to the AI data sources.
-<!-- AskCount | `int64` | The number of validators that are requested to respond to this request
-MinCount | `int64` | The minimum number of validators necessary for the request to proceed to the execution phase -->
 ValidatorCount | `int64` | The number of validators that are needed to execute the request. The current default value is 1 for testing.
 Fees | `string` | The transaction fee required to run this test case. Eg: 5000orai
 
@@ -235,8 +137,6 @@ ContractName | `string` | The unique name identifier of the oracle script.
 Creator | `sdk.AccAddress` | The address of the message's sender or creator of this request.
 Validators | `[]sdk.ValAddress` | The list validator addresses that participate in the request.
 BlockHeight | `int64` | The block height that contains the transaction creating the AI request.
-<!-- AskCount | `int64` | The number of validators that are requested to respond to this request
-MinCount | `int64` | The minimum number of validators necessary for the request to proceed to the execution phase -->
 AIDataSources | `[]AIDataSource` | The list of data sources that will be called.
 TestCases | `[]TestCase` | The list of test cases that will be called.
 Fees | `string` | The transaction fee required to run this request. Eg: 20000orai

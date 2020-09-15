@@ -1,33 +1,21 @@
-# Website
+# Oraichain Documentation
 
-This website is built using [Docusaurus 2](https://v2.docusaurus.io/), a modern static website generator.
 
-### Installation
+This documentation site is automatically deployed to https://docs.orai.io/ 
+The main documentation is stored in the `docs` folder
 
-```
-$ yarn
-```
+# How to Change the Docs
 
-### Local Development
+- install [yarn](https://yarnpkg.com/)
 
-```
-$ yarn start
-```
+- install dependencies
+    ```
+    $ yarn
+    ```
+- Run project
 
-This command starts a local development server and open up a browser window. Most changes are reflected live without having to restart the server.
-
-### Build
-
-```
-$ yarn build
-```
-
-This command generates static content into the `build` directory and can be served using any static contents hosting service.
-
-### Deployment
-
-```
-$ GIT_USER=<Your GitHub username> USE_SSH=true yarn deploy
-```
-
-If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
+    ```
+    $ yarn start
+    ```
+    This command starts a local development server and open up a browser window. Most changes are reflected live without having to restart the server.
+- In most times, you only need to add new pages with links on existing pages, such as index.md or *.md in docs folder. These files are all markdown format.

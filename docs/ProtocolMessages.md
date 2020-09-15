@@ -39,7 +39,7 @@ Description | `string` | The description of this data source
 Code | `[]byte` | The source code in bytes of this data source
 Fees | `string` | The transaction fee required to run this data source. Eg: 5000orai
 
-### QueryResDataSource
+### QueryResAIDataSource
 
 When querying, the user only needs to type the name of the data source, and the system will return three attributes below in JSON format.
 
@@ -237,7 +237,7 @@ Validators | `[]sdk.ValAddress` | The list validator addresses that participate 
 BlockHeight | `int64` | The block height that contains the transaction creating the AI request.
 <!-- AskCount | `int64` | The number of validators that are requested to respond to this request
 MinCount | `int64` | The minimum number of validators necessary for the request to proceed to the execution phase -->
-DataSources | `[]DataSource` | The list of data sources that will be called.
+AIDataSources | `[]AIDataSource` | The list of data sources that will be called.
 TestCases | `[]TestCase` | The list of test cases that will be called.
 Fees | `string` | The transaction fee required to run this request. Eg: 20000orai
 

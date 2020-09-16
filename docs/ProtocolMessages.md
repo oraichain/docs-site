@@ -47,6 +47,7 @@ Parameter | Type | Description
 Name | `string` | The human-readable string name for this data source
 Owner | `sdk.AccAddress` | The address of the entity who will be responsible for maintaining the ai data source
 Code | `string` | The source code in string of this data source
+Description | `string` | The description of this data source
 
 ### MsgCreateOracleScript
 
@@ -80,6 +81,7 @@ Parameter | Type | Description
 Name | `string` | The human-readable string name for this oracle script
 Owner | `sdk.AccAddress` | The address of the entity who will be responsible for maintaining the oracle script
 Code | `string` | The source code in string of this oracle script
+Description | `string` | The description of this oracle script
 
 ### MsgCreateTestCase
 
@@ -111,6 +113,7 @@ Parameter | Type | Description
 Name | `string` | The human-readable string name for this test case
 Owner | `sdk.AccAddress` | The address of the entity who will be responsible for maintaining the test case
 Code | `string` | The source code in string of this test case
+Description | `string` | The description of this test case
 
 ### MsgSetAIRequest
 
@@ -119,7 +122,7 @@ Requests a new data based on an existing oracle script. A data request will be a
 Parameter | Type | Description
 ---------|----------|---------
 RequestID | `string` | the unique identifier of this oracle request, as specified by the client. This same unique ID will be sent back to the requester with the oracle response. This field is filled automatically, so the user does not need to care about this.
-ContractName | `string` | The unique name identifier of the oracle script.
+OracleScriptName | `string` | The unique name identifier of the oracle script.
 Creator | `sdk.AccAddress` | The address of the message's sender or creator of this request.
 ImageHash | `string` | The image hash stored on IPFS. Each validator will collect the actual image using this hash to send to the AI data sources.
 ImageName | `string` | The image name to send to the AI data sources.
@@ -133,7 +136,7 @@ When querying, the user only needs to type the id of the AI request, and the sys
 Parameter | Type | Description
 ---------|----------|---------
 RequestID | `string` | the unique identifier of this oracle request, as specified by the client. This same unique ID will be sent back to the requester with the oracle response. This field is filled automatically, so the user does not need to care about this.
-ContractName | `string` | The unique name identifier of the oracle script.
+OracleScriptName | `string` | The unique name identifier of the oracle script.
 Creator | `sdk.AccAddress` | The address of the message's sender or creator of this request.
 Validators | `[]sdk.ValAddress` | The list validator addresses that participate in the request.
 BlockHeight | `int64` | The block height that contains the transaction creating the AI request.

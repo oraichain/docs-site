@@ -1,5 +1,5 @@
 module.exports = {
-  title: 'Oraichain',
+  title: 'Oraichain Whitepaper',
   tagline: 'Oracle Artificial Intelligence for Blockchain',
   url: 'https://orai.io',
   baseUrl: '/',

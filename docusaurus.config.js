@@ -27,7 +27,19 @@ module.exports = {
     footer: {
       style: 'dark',
       links: [
-
+        {
+          title: 'Links',
+          items: [
+            {
+              label: 'Oraichain Website',
+              href: 'https://orai.io',
+            },
+            {
+              label: 'Yield Farming',
+              href: 'https://yield.orai.io',
+            },
+          ],
+        },
         {
           title: 'Community',
           items: [
@@ -55,7 +67,7 @@ module.exports = {
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} Oraichain.`,
+      copyright: `Copyright © ${new Date().getFullYear()} <a href="https://orai.io">Oraichain Pte. Ltd.</a>`,
     },
   },
   presets: [

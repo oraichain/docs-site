@@ -36,16 +36,19 @@ The diagram demonstrates the list after the duplication step, where three dots m
 
 ### Validator sampling
 
-**1): Random generator tool**
-Oraichain makes uses of an existing tool from [Oasis Protocol Foundation](https://oasisprotocol.org/). It has implemented a [HMAC-DRBG algorithm](https://github.com/oasisprotocol/oasis-core/blob/master/go/common/crypto/drbg/hmac_drbg.go) published in the [published in NIST SP 800-90A](https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-90Ar1.pdf) to generate a random number given a seed, a nonce, and a personalizationString. This helps generate a random figure that is consistent for every node based on a set of number parameters above, whereas the random function of Golang cannot provide the similar behaviour. There are a number of HMAC-DRBG implementations for Go, but Oasis is growing fast, and the foundation focuses on security and privacy the most. As a result, we choose it as a package to generate a random number.
+**1) Random generator tool:**
 
-**2): HMAC-DRBG parameters**
+Oraichain makes uses of an existing tool from [Oasis Protocol Foundation](https://oasisprotocol.org/). It has implemented a [HMAC-DRBG algorithm](https://github.com/oasisprotocol/oasis-core/blob/master/go/common/crypto/drbg/hmac_drbg.go) published in the [NIST SP 800-90A](https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-90Ar1.pdf) to generate a random number given a seed, a nonce, and a personalizationString. This helps generate a random figure that is consistent for every node based on a set of number parameters above, whereas the random function of Golang cannot provide the similar behaviour. There are a number of HMAC-DRBG implementations for Go, but Oasis is growing fast, and the foundation focuses on security and privacy the most. As a result, we choose it as a package to generate a random number.
+
+**2) HMAC-DRBG parameters:**
+
 The seeding parameter is generated every new block, while the nonce is taken from the request ID. The personalizationString, on the other hand, is the chain ID of the system, which is Oraichain, to personalize the random generator.
 
-**3): Process the random value**
+**3) Process the random value:**
+
 After receiving the random number. We make many modulo calculations, with first the dividend being the random number, while the divisor is the total voting power of all validators at the calculation time. The quotient then becomes the next divisor, while the divisor becomes to next dividend. This loop continues until we collect a value between the range of the ```list``` before using it as an index to choose the next validator. Finally, the chosen validator is removed from the chosen list, and the process starts again with a new random value. It stops when we have selected enough validators to execute the oracle scripts. As a result, we can collect a random validator that is based on its voting power. Oraichain does not store this ```list```, so it does not consume any additional gas.
 
-For example, we need two validators to execute the oracle scripts. Firstly, we get a random number which is 18090388581894877127 from the random generator. Assume that the total voting power is 300, and the list size is 12 like in the diagram above, we then get 227 as the quotient. Next, we calculate 300 % 227, which is equal to 73. It goes on until we collect a number within the range of [0, 9], which is 8 in this case. So the validator at the 8th index is chosen. The process repeats again with the new random value.
+For example, we need two validators to execute the oracle scripts. Firstly, we get a random number which is 18090388581894877127 from the random generator. Assume that the total voting power is 300, and the list size is 12 like in the diagram above, we then get 227 as the quotient. Next, we calculate 300 % 227, which is equal to 73. It goes on until we collect a number within the range of [0, 11], which is 8 in this case. So the validator at the 8th index is chosen. The process repeats again with the new random value.
 
 This allows the validator sampling process be random at each step, which makes sure that potentially malicious validators cannot fully control the seed nor the chosen indexes.
 

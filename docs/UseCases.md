@@ -7,7 +7,7 @@ AI will be the next big thing and upgrade of smart contracts in DApps. How to ma
 Oraichain also supports regular centralized applications in using AI APIs on the decentralized Oraichain marketplace. Users can find better AI providers with better price in this marketplace.
 
 ## Yield farming using AI services on Oraichain (yAI)
-MVP version: https://yield.orai.io
+MVP version: https://yai.finance
 
 The yield farming based on Oraichain (namely yAI) has got inspiration from yearn.finance (YFI) that helps reduce the complexity of yield trading and provides trading strategies from crowdsourcing DAO voting. Instead of using crowdsourcing knowledge, Oraichain provides AI-based price prediction APIs as inputs to smart contracts. The yield farming use case has two functionalities as follows:
 - Earn: Get price prediction from Oraichain and automatically decide BUY/SELL tokens. You can choose the best performance AI APIs.

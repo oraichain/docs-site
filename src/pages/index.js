@@ -12,7 +12,7 @@ const features = [
     imageUrl: "img/growth-strategy.svg",
     description: (
       <>
-        Oraichain enables smart contracts to securely access external AI APIs.
+       Oraichain enables smart contracts to securely access external AI APIs.
         Artificial Intelligence helps enhance smart contracts.
       </>
     ),
@@ -22,43 +22,43 @@ const features = [
     imageUrl: "img/integrated-marketing.svg",
     description: (
       <>
-        Search, trial, and select from an ever-growing library of AI algorithms
-        created by a community of service providers. Integrate AI services into
-        your own applications (both Dapps and regular apps).
+        Have access to, look up, and choose an ever-increasing AI algorithms and models 
+        from different providers around the world. Develop your applications along with 
+        the integration of AI services to increase your application functionalities as well as values.
+
       </>
     ),
   },
   {
-    title: <>AI Publisher </>,
+    title: <>AI Provider </>,
     imageUrl: "img/design-development.svg",
     description: (
       <>
-        Our publishing infrastructure provides both a central hub for creating,
-        editing, and managing your AI services and the tools to launch those
-        services to a global market.
+       AI developers, individuals or companies, can have a chance to publish, edit, 
+       and manage their work and earn rewards from the users on a global scale. 
+       Hence, you can improve your models, even more, collect data and continue to provide exceptional AI services.
+
       </>
     ),
   },
   {
-    title: <>ORAI Staking </>,
+    title: <>Staking & Earning </>,
     imageUrl: "img/digital-strategy.svg",
     description: (
       <>
-        Earn more while holding ORAI tokens by vesting them in 30-day staking
-        sessions. By staking ORAI tokens, you support the operations of our
-        blockchain network and in doing so you will be rewarded with more ORAI
-        tokens for your contributions.
+        Staking means earning. By staking your ORAI tokens into one or more validators,
+         you will have a chance to participate in the system as a governor while earning more. 
+         Moreover, by doing so, your contributions also have a positive impact on our operations of the network. 
+         It is a win-win for all sides.
       </>
     ),
   },
   {
-    title: <>Request for AI </>,
+    title: <>Users & AI requests </>,
     imageUrl: "img/digital-marketing.svg",
     description: (
       <>
-        The Request for AI portal (RFAI): A community crowdsource portal
-        allowing anyone to make requests for, and offer to fund, new AI services
-        that are currently not available on the market.
+      Users can make different requests to AI services that are not easy to find elsewhere, as the service providers may not have enough resources to provide a stand-alone AI service application. If the services are great, sending funds to these services can be worth considering to allow them to grow more and more.
       </>
     ),
   },

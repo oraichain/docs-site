@@ -29,13 +29,13 @@ The proposed Oraichain could be a bridge to bring AI to smart contracts. The Ora
 
 - Oracle AI: Oraichain enables smart contracts to securely access external AI APIs. Artificial Intelligence helps enhance smart contracts.
 
-- AI Marketplace: search, trial, and select from an ever-growing library of AI algorithms created by a community of service providers. Integrate AI services into your applications (both Dapps and regular apps).
+AI Marketplace: Have access to, look up, and choose an ever-increasing AI algorithms and models from different providers around the world. Develop your applications along with the integration of AI services to increase your application functionalities as well as values.
 
-- AI Publisher: our publishing infrastructure provides both a central hub for creating, editing, and managing your AI services and the tools to launch those services to a global market.
+AI Publisher: AI developers, individuals or companies, can have a chance to publish, edit, and manage their work and earn rewards from the users on a global scale. Hence, you can improve your models, even more, collect data and continue to provide exceptional AI services.
 
-- ORAI Staking: earn more while holding ORAI tokens by vesting them in 30-day staking sessions. By staking ORAI tokens, you support the operations of our blockchain network while getting rewarded with more ORAI tokens for your contributions.
+ORAI Staking: Staking means earning. By staking your ORAI tokens into one or more validators, you will have a chance to participate in the system as a governor while earning more. Moreover, by doing so, your contributions also have a positive impact on our operations of the network. It is a win-win for all sides.
 
-- Request for AI (RFAI): a community crowdsource portal allowing anyone to make requests for, and offer to fund, new AI services that are currently not available on the market.
+Request for AI: Users can make different requests to AI services that are not easy to find elsewhere, as the service providers may not have enough resources to provide a stand-alone AI service application. If the services are great, sending funds to these services can be worth considering to allow them to grow more and more.
 
 - ORAI DAO: you are the governor of the product serving you. Oraichain is of, for, and by the community. Oraichain team just helps initialize the project and when the mainnet is started, any changes of Oraichain should be reviewed by validators and stakeholders.
 
@@ -47,8 +47,7 @@ The common use case of smart contracts is only tokenization, and it has not been
 
 The single state of blockchain ledger makes all operations deterministic. It means that the same operation performed on different nodes should give the same result. Note that the different in results will lead to failed consensus among blockchain nodes. The typical example of non-deterministic operations is calling an external API from outside since each API call could return different values.
 
-An oracle is a blockchain middleware that creates a secure connection between smart contracts and various off-chain resources that they need to function. It acts as the middle layer between a blockchain and an API that translates information for the blockchain to read.
-An oracle plays a role as a blockchain middleware creating a secure connection between smart contracts and off-chain data, such as external APIs of price and weather. An oracle could be a set of blockchain nodes that are randomly selected to perform data fetching from external data sources. The data fetched by an oracle will be written to its own blockchain or Ethereum.
+Oracle, in terms of definition, is a person who can provide useful information. We also have Oracle as a name of a company, but this is not that Oracle. Oracle in the blockchain is a type of middleware that connects blockchain with the resources outside. In the past, blockchain could only have access to its internal data and resources, which is very limited, whereas other systems were free to do so with simple REST APIs. Now things have changed, oracle has come to provide blockchain more functionalities by allowing it to call external APIs. In a blockchain, an oracle can be a node that collects data from other sources of data. It also can be a script file that calls a CURL request and receive the request's response before writing that response onto the blockchain.
 
 Oraichain provides an oracle that helps fetch external data securely and its architecture is designed to focus more on AI data sources as follows:
 - Request format including input parameters and test cases

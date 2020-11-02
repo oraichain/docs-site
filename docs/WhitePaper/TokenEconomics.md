@@ -11,11 +11,11 @@ We are reworking. Stay tuned!
 ## ORAI token distribution (%)
 **The token supply distribution is as follows:**
 
-We are reworking. Stay tuned!
+![Oraichain’s System Overview](../../static/img/token-allocation-chart.png)
 
 **ORAI token release schedule (%):**
 
-We are reworking. Stay tuned!
+![Oraichain’s System Overview](../../static/img/token-release-schedule.png)
 
 ## Token governance and use of funds
 Funds raised in the seed and private rounds will be spent according to the following allocations:

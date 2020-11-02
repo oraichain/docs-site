@@ -1,5 +1,5 @@
 ---
-id: Become a Validator
+id: become-a-validator
 title: Become a Validator
 
 ---

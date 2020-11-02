@@ -10,6 +10,6 @@ module.exports = {
       "WhitePaper/ProtocolMessages",
     ],
     Developer: ["Developers/OraichainInstallation"],
-    Validator: ["Validators/ValidatorTutorial"],
+    Validator: ["Validators/become-a-validator"],
   },
 };

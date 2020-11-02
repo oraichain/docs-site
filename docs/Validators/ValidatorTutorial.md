@@ -1,6 +1,6 @@
 ---
-id: ValidatorTutorial
-title: ValidatorTutorial
+id: Become a Validator
+title: Become a Validator
 
 ---
 

@@ -5,8 +5,6 @@ title: Token Economics
 
 When we call **ORAI**, it means that it is native ORAI tokens created and contained in the Oraichain network. At the beginning, we are basing on ERC20 to issue ORAI token on the Ethereum network that we call **ERC20-ORAI**.
 
-## Key metrics
-We are reworking. Stay tuned!
 
 ## ORAI token distribution (%)
 **The token supply distribution is as follows:**

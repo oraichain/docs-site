@@ -20,7 +20,7 @@ The validators are chosen randomly based on their voting powers. Indeed, all the
 
 #### Initial bonded validator list diagram
 
-![Initial bonded validator list diagram](./../static/img/sorted_val_list.png)
+![Initial bonded validator list diagram](../../static/img/sorted_val_list.png)
 
 The diagram shows an example of a bonded validator ```list``` with each index value is the validator's voting power. In the system, the value is actually a Validator struct to hold more information needed.
 
@@ -30,7 +30,7 @@ The algorithm continues with the 6th validator being copied 10 - 6 - 1 = 3 times
 
 #### Validator duplication diagram
 
-![Validator duplication diagram](./../static/img/validator_duplication.png)
+![Validator duplication diagram](../../static/img/validator_duplication.png)
 
 The diagram demonstrates the list after the duplication step, where three dots means that the list can be longer than that. 
 

@@ -25,7 +25,7 @@ There are several scenarios in which face authentication is very useful as follo
 - Using your face in order to reset your private/public key pair.
 - Using both your private key and face in order to execute a smart contract.
 
-![Flexible smart contracts using face authentication](./../static/img/face-authentication.png)
+![Flexible smart contracts using face authentication](../../static/img/face-authentication.png)
 Using face authentication might be riskier than a private key, but it helps increase user experience. In cases of checking balance and withdrawing tokens to registered wallets, face authenticatiion is safe and convenient.
 
 ## Fake news detection using different AI providers from Oraichain

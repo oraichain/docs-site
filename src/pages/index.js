@@ -12,18 +12,18 @@ const features = [
     imageUrl: "img/growth-strategy.svg",
     description: (
       <>
-       Oraichain enables smart contracts to securely access external AI APIs.
+        Oraichain enables smart contracts to securely access external AI APIs.
         Artificial Intelligence helps enhance smart contracts.
       </>
     ),
   },
   {
-    title: <>AI marketplace </>,
+    title: <>AI Marketplace </>,
     imageUrl: "img/integrated-marketing.svg",
     description: (
       <>
-        Have access to, look up, and choose an ever-increasing AI algorithms and models 
-        from different providers around the world. Develop your applications along with 
+        Have access to, look up, and choose an ever-increasing AI algorithms and models
+        from different providers around the world. Develop your applications along with
         the integration of AI services to increase your application functionalities as well as values.
 
       </>
@@ -34,9 +34,9 @@ const features = [
     imageUrl: "img/design-development.svg",
     description: (
       <>
-       AI developers, individuals or companies, can have a chance to publish, edit, 
-       and manage their work and earn rewards from the users on a global scale. 
-       Hence, you can improve your models, even more, collect data and continue to provide exceptional AI services.
+        AI developers, individuals or companies, can have a chance to publish, edit,
+        and manage their work and earn rewards from the users on a global scale.
+        Hence, you can improve your models, even more, collect data and continue to provide exceptional AI services.
 
       </>
     ),
@@ -47,9 +47,9 @@ const features = [
     description: (
       <>
         Staking means earning. By staking your ORAI tokens into one or more validators,
-         you will have a chance to participate in the system as a governor while earning more. 
-         Moreover, by doing so, your contributions also have a positive impact on our operations of the network. 
-         It is a win-win for all sides.
+        you will have a chance to participate in the system as a governor while earning more.
+        Moreover, by doing so, your contributions also have a positive impact on our operations of the network.
+        It is a win-win for all sides.
       </>
     ),
   },
@@ -58,7 +58,7 @@ const features = [
     imageUrl: "img/digital-marketing.svg",
     description: (
       <>
-      Users can make different requests to AI services that are not easy to find elsewhere, as the service providers may not have enough resources to provide a stand-alone AI service application. If the services are great, sending funds to these services can be worth considering to allow them to grow more and more.
+        Users can make different requests to AI services that are not easy to find elsewhere, as the service providers may not have enough resources to provide a stand-alone AI service application. If the services are great, sending funds to these services can be worth considering to allow them to grow more and more.
       </>
     ),
   },
@@ -111,7 +111,7 @@ function Home() {
                 "button button--outline button--secondary button--lg",
                 styles.getStarted
               )}
-              to={useBaseUrl("docs/")}
+              to={useBaseUrl("docs/whitepaper/introduction")}
             >
               Get Started
             </Link>

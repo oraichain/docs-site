@@ -11,7 +11,7 @@ The ORAI consensus protocol is similar to the delegated proof-of-stake (DPoS). I
 The second task of the validators is to collect data from AI providers and validate that data before they are written to the blockchain. To validate an AI API, validators will do testing based on the test cases given by users, smart contracts, and test providers. If users do not know which test case is good, they can request some test cases from test providers.
 
 ## System Architecture
-![Oraichain’s System Overview](./../static/img/Oraichain_request_data_flow.jpg)
+![Oraichain’s System Overview](../../static/img/Oraichain_request_data_flow.jpg)
 The flow of requesting an AI API is illustrated in the Oraichain’s System Overview figure. To perform a request, users or smart contracts need to call an oracle script that is available on the ORAI gateway or marketplace. In an oracle script, there are AI data sources (provided by AI providers), test cases, test source (optional), and transaction fees for each request. When a request comes, a random willing validator is chosen to perform this request. The chosen validator will fetch data from one or more AI providers on behalf of the user after executing the test scenarios, and if the AI provider fails in testing, the request is canceled.
 
 A request is successful if its result is written to the Oraichain blockchain. The transaction result, which can be fetched from smart contracts and regular applications, is proof of execution, and fees are applied in this transaction. There is an overhead of reading results from Oraichain’s transactions, but it helps ensure that the AI API quality is good and there is no data tampering during the process of fetching data from AI providers.

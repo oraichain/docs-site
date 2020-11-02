@@ -6,54 +6,16 @@ title: Token Economics
 When we call **ORAI**, it means that it is native ORAI tokens created and contained in the Oraichain network. At the beginning, we are basing on ERC20 to issue ORAI token on the Ethereum network that we call **ERC20-ORAI**.
 
 ## Key metrics
-| Token Name                 | ORAI                          |
-|----------------------------|-------------------------------|
-| Token Type                 | ERC20 (and native after mainnet launch)                      |
-|**Seed Sale Round**||
-| Amount Expected Seed Sale    | $70,000                       |
-| Seed Sale Token Price      | Each ERC20-ORAI = $0.081       |
-| Seed Sale Allocation       | 860,000 ERC20-ORAI (1.00%)           |
-| Seed Sale Date             | 25th~30th September 2020      |
-| Locked time                | 0.25% unlocked, 0.75% locked until public sale      |
-|**Private Sale Round**||
-| Amount Expected Private Sale | TBD                    |
-| Private Sale Token Price   | TBD         |
-| Private Sale Allocation    | 10,000,000 ERC20-ORAI (11.63%)  |
-| Private Sale Date          | October to December 2020     |
-| Locked time                | 5.82% locked until mainnet launch, 5.82% locked over one year      |
-|**Public Sale Round**||
-| Public Sale Token Price       | TBD                           |
-| Public Sale Allocation | 11,180,000 ERC20-ORAI (13.00%)         |
-| Public Sale Date        | January 2021             |
-| Initial Circulating Supply | 215,000 (0.25%)           |
-| Total Token Supply         | 86,000,000 ERC20-ORAI               |
+We are reworking. Stay tuned!
 
 ## ORAI token distribution (%)
 **The token supply distribution is as follows:**
-- Seed Sale Investors comprise 1.00% of the total token supply.
-- Private Sale Investors comprise 11.63% of the total token supply.
-- Public Sale Investors comprise 13.00% of the total token supply.
-- Ecosystem comprises 30.00% of the total token supply.
-- Team comprises 17.37% of the total token supply.
-- Advisors comprise 7.00% of the total token supply.
-- Foundation comprises 20.00% of the total token supply.
 
-![Token allocation](./../static/img/token-allocation.png)
+We are reworking. Stay tuned!
 
-Foundation tokens are used to fund critical development of Oraichain-related technologies and provide financial support to projects and entities within the Oraichain community, in order to accelerate the growth of the ecosystem.
-Ecosystem tokens will be incentives for Validators, AI Providers, and Testcase Providers.
+**ORAI token release schedule (%):**
 
-**ORAI token release schedule (%)**
-
-All team, advisors, and private sale investors' tokens are locked at least after the mainnet launch.
-Therefore, no founders, team members, advisors, or investors in the private sale round will be able to sell ERC20-ORAI tokens on any secondary market at the time of listing or any time prior to the mainnet launch.
-We think it is very important to set up the incentives properly for our team and early supporters in the seed sale round.
-- 75% of seed sale tokens are locked until public sale.
-- 50% of private sale tokens are locked for 1 year.
-- 50% of team tokens are locked in 5 years.
-- 30% of advisor tokens are locked in 5 years.
-
-![Token Release Schedule](./../static/img/token-release-schedule.png)
+We are reworking. Stay tuned!
 
 ## Token governance and use of funds
 Funds raised in the seed and private rounds will be spent according to the following allocations:

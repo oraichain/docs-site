@@ -22,9 +22,10 @@ const features = [
     imageUrl: "img/integrated-marketing.svg",
     description: (
       <>
-        Have access to, look up, and choose an ever-increasing AI algorithms and models from
-        different providers around the world. Develop your applications along with the
-        integration of AI services to increase your application functionalities as well as values.
+        Have access to, look up, and choose an ever-increasing AI algorithms and models
+        from different providers around the world. Develop your applications along with
+        the integration of AI services to increase your application functionalities as well as values.
+
       </>
     ),
   },
@@ -33,14 +34,15 @@ const features = [
     imageUrl: "img/design-development.svg",
     description: (
       <>
-        AI developers, individuals or companies, can have a chance to publish, edit, and manage their work
-        and earn rewards from the users on a global scale. Hence, you can improve your models even more,
-        collect data and continue to provide exceptional AI services.
+        AI developers, individuals or companies, can have a chance to publish, edit,
+        and manage their work and earn rewards from the users on a global scale.
+        Hence, you can improve your models, even more, collect data and continue to provide exceptional AI services.
+
       </>
     ),
   },
   {
-    title: <>Staking & Earning</>,
+    title: <>Staking & Earning </>,
     imageUrl: "img/digital-strategy.svg",
     description: (
       <>
@@ -52,14 +54,11 @@ const features = [
     ),
   },
   {
-    title: <>Users & AI requests</>,
+    title: <>Users & AI requests </>,
     imageUrl: "img/digital-marketing.svg",
     description: (
       <>
-        Users are able to make different requests to AI services that are not easy to find elsewhere,
-        as the service providers may not have enough resources to provide a stand-alone AI service application.
-        If the services are great, sending funds to these services can be worth considering to allow them grow
-        more and more.
+        Users can make different requests to AI services that are not easy to find elsewhere, as the service providers may not have enough resources to provide a stand-alone AI service application. If the services are great, sending funds to these services can be worth considering to allow them to grow more and more.
       </>
     ),
   },

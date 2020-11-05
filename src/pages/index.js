@@ -13,7 +13,7 @@ const features = [
     description: (
       <>
         Oraichain enables smart contracts to securely access external AI APIs.
-        Artificial Intelligence helps enhance smart contracts.
+        Artificial Intelligence helps enhance smart contracts. Users are able to collect more useful information from the blockchain through AI, where normally, a number of blockchain platforms currently focus only on oracle prices and cryptocurrencies. Not only that, other systems can exploit the Oraichain system by sending requests, and Oraichain will return a response that will be stored on-chain. Hence, that result is reliable and can be used as proofs in the future.
       </>
     ),
   },
@@ -22,22 +22,25 @@ const features = [
     imageUrl: "img/integrated-marketing.svg",
     description: (
       <>
-        Have access to, look up, and choose an ever-increasing AI algorithms and models
-        from different providers around the world. Develop your applications along with
-        the integration of AI services to increase your application functionalities as well as values.
-
+        An ecosystem for those that would want to experience Artificial Intelligence from a blockchain system, which is Oraichain. For providers, they can provide their AI services to earn ORAI token rewards, where they do not need to rely on any third parties to host their models. Such services can be AI-based yield farming, face authentication, price prediction, and more. Small companies or individuals can consider this as a chance to compete with bigger ones in the AI field while getting more users involved. Some AI services will be supplied initially by the development team as a foundation for others to join in. Meanwhile, users can pay using ORAI tokens to use the AI services for their needs.
       </>
     ),
   },
   {
-    title: <>AI Provider </>,
+    title: <>AI Ecosystem </>,
     imageUrl: "img/design-development.svg",
     description: (
       <>
-        AI developers, individuals or companies, can have a chance to publish, edit,
-        and manage their work and earn rewards from the users on a global scale.
-        Hence, you can improve your models, even more, collect data and continue to provide exceptional AI services.
-
+        An ecosystem where a part of it is the AI marketplace. Others include a large AI infrastructure that can support AI providers build their models and deploy them successfully onto the Oraichain network. A complete and fully functional web GUI is expected to serve AI providers publish their services easier and faster. For users, they can see and follow the complete flow of how their AI request is executed, from the start to finish. This helps increase transparency as well as integrity of the system, and users can easily see the malicious providers or validators who execute the request badly.
+      </>
+    ),
+  },
+  {
+    title: <>Test Cases</>,
+    imageUrl: "img/design-development.svg",
+    description: (
+      <>
+        An unique feature of Oraichain is Test Case. Indeed, since we provide an AI ecosystem on a blockchain network, it is crucial to provide test cases that can verify the correctness or integrity of the AI services on the system. A third party can join as a Test Case provider to examine if a specific AI model is qualified to charge user fees or not. Moreover, users can also provide their expected outputs from the model to check if the results are similar to what they initially evaluated. This will encourage the AI providers to work hard and supply quality services to be able to earn rewards from the users.
       </>
     ),
   },
@@ -46,19 +49,7 @@ const features = [
     imageUrl: "img/digital-strategy.svg",
     description: (
       <>
-        Staking means earning. By staking your ORAI tokens into one or more validators,
-        you will have a chance to participate in the system as a governor while earning more.
-        Moreover, by doing so, your contributions also have a positive impact on our operations of the network.
-        It is a win-win for all sides.
-      </>
-    ),
-  },
-  {
-    title: <>Users & AI requests </>,
-    imageUrl: "img/digital-marketing.svg",
-    description: (
-      <>
-        Users can make different requests to AI services that are not easy to find elsewhere, as the service providers may not have enough resources to provide a stand-alone AI service application. If the services are great, sending funds to these services can be worth considering to allow them to grow more and more.
+        Users can become delegators, where they put tokens into a specific validator to increase its power within the blockchain network. From there, that validator can have more chances of executing requests, which will earn a specific amount of commission while the rest goes back to the delegators. The delegators, however, have to monitor their delegated validators well, as a malicious validator may try to break the system's rule to earn more. If one gets caught, all the staked tokens of the delegators will be slashed. In other words, there's a tight coupling between two entities, and they should both
       </>
     ),
   },
@@ -68,7 +59,7 @@ const features = [
     description: (
       <>
         You are the governor of the product serving you. Oraichain is of, for,
-        and by Community.
+        and by Community. By owning ORAI tokens, you can take part in to govern the development and future plan for the Oraichain system. Because this is a decentralized network, the project development team only creates the foundation, while you can build a bright future for it using your own tokens.
       </>
     ),
   },

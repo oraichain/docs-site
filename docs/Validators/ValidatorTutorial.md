@@ -98,7 +98,14 @@ node index.js to start the server
 ```
 ./websocket.sh <acc-name> <reporter-name>
 ```
-14. Happy validating !!
+
+14. Install jq to process responses from the data sources (optional in case the data sources )
+
+```
+sudo apt install jq
+```
+
+15. Happy validating !!
 
 #### Note:
 

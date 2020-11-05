@@ -22,7 +22,16 @@ const features = [
     imageUrl: "img/integrated-marketing.svg",
     description: (
       <>
-        An ecosystem for those that would want to experience Artificial Intelligence from a blockchain system, which is Oraichain. For providers, they can provide their AI services to earn ORAI token rewards, where they do not need to rely on any third parties to host their models. Small companies or individuals can consider this as a chance to compete with bigger ones in the AI field while getting more users involved. Some AI services will be supplied initially by the development team as a foundation for others to join in.
+        An ecosystem for those that would want to experience Artificial Intelligence from a blockchain system, which is Oraichain. For providers, they can provide their AI services to earn ORAI token rewards, where they do not need to rely on any third parties to host their models. Such services can be AI-based yield farming, face authentication, price prediction, and more. Small companies or individuals can consider this as a chance to compete with bigger ones in the AI field while getting more users involved. Some AI services will be supplied initially by the development team as a foundation for others to join in. Meanwhile, users can pay using ORAI tokens to use the AI services for their needs.
+      </>
+    ),
+  },
+  {
+    title: <>AI Ecosystem </>,
+    imageUrl: "img/design-development.svg",
+    description: (
+      <>
+        An ecosystem where a part of it is the AI marketplace. Others include a large AI infrastructure that can support AI providers build their models and deploy them successfully onto the Oraichain network. A complete and fully functional web GUI is expected to serve AI providers publish their services easier and faster. For users, they can see and follow the complete flow of how their AI request is executed, from the start to finish. This helps increase transparency as well as integrity of the system, and users can easily see the malicious providers or validators who execute the request badly.
       </>
     ),
   },

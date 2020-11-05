@@ -1,6 +1,6 @@
 module.exports = {
   someSidebar: {
-    "Whitepaper": [
+    Whitepaper: [
       "WhitePaper/Introduction",
       "WhitePaper/Terminology",
       "WhitePaper/SystemOverview",
@@ -9,9 +9,7 @@ module.exports = {
       "WhitePaper/TokenEconomics",
       "WhitePaper/ProtocolMessages",
     ],
-    "Developer": ['Developers/OraichainInstallation'],
-    "Validator":[
-      'Validators/ValidatorTutorial'
-    ]
+    Developer: ["Developers/OraichainInstallation"],
+    Validator: ["Validators/become-a-validator"],
   },
 };

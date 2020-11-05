@@ -1,5 +1,5 @@
 ---
-id: ValidatorTutorial
+id: OraichainInstallation
 title: ValidatorTutorial
 
 ---

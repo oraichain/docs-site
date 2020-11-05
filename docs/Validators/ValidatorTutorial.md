@@ -1,5 +1,5 @@
 ---
-id: Become a Validator
+id: become-a-validator
 title: Become a Validator
 
 ---
@@ -7,7 +7,7 @@ title: Become a Validator
 ## Step by step guide to participate in Oraichain as a full node:
 
 
-1. It is necessary to [install Oraichain](http://docs.orai.io/docs/developers/oraichainInstallation) before going further.
+1. It is necessary to [install Oraichain](https://docs.orai.io/docs/developers/oraichainInstallation) before going further.
 
 2. Remove files and directories from the previous configured node (if has):
 

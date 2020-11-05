@@ -22,7 +22,7 @@ const features = [
     imageUrl: "img/integrated-marketing.svg",
     description: (
       <>
-        An ecosystem for those that would want to experience Artificial Intelligence from a blockchain system, which is Oraichain. For providers, they can provide their AI services to earn ORAI token rewards, where they do not need to rely on any third parties to host their models. Such services can be AI-based yield farming, face authentication, price prediction, and more. Small companies or individuals can consider this as a chance to compete with bigger ones in the AI field while getting more users involved. Some AI services will be supplied initially by the development team as a foundation for others to join in. Meanwhile, users can pay using ORAI tokens to use the AI services for their needs.
+        A place for those that would want to experience Artificial Intelligence from a blockchain system, which is Oraichain. For providers, they can provide their AI services to earn ORAI token rewards, where they do not need to rely on any third parties to host their models. Such services can be AI-based yield farming, face authentication, price prediction, and more. Small companies or individuals can consider this as a chance to compete with bigger ones in the AI field while getting more users involved. Some AI services will be supplied initially by the development team as a foundation for others to join in. Meanwhile, users can pay using ORAI tokens to use the AI services for their needs.
       </>
     ),
   },

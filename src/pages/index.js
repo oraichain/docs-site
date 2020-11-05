@@ -49,7 +49,7 @@ const features = [
     imageUrl: "img/digital-strategy.svg",
     description: (
       <>
-        Users can become delegators, where they put tokens into a specific validator to increase its power within the blockchain network. From there, that validator can have more chances of executing requests, which will earn a specific amount of commission while the rest goes back to the delegators. The delegators, however, have to monitor their delegated validators well, as a malicious validator may try to break the system's rule to earn more. If one gets caught, all the staked tokens of the delegators will be slashed. In other words, there's a tight coupling between two entities, and they should both
+        Users can become delegators, where they put tokens into a specific validator to increase its power within the blockchain network. From there, that validator can have more chances of executing requests, which will earn a specific amount of commission while the rest goes back to the delegators. The delegators, however, have to monitor their delegated validators well, as a malicious validator may try to break the system's rule to earn more. If one gets caught, all the staked tokens of the delegators will be slashed. In other words, there's a tight coupling between two entities, and they should both be responsible for delivering a quality environment of the system.
       </>
     ),
   },

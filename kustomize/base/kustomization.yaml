@@ -8,4 +8,4 @@ namespace: orai-prod
 images:
 - name: docs-site
   newName: thao1996/docs-site
-  newTag: 7e15f4483ad9073b37e14382f3b64888836d4592
+  newTag: 6c31f519b47d4373b85e8b0477bc8239d568229e

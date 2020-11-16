@@ -1,0 +1,16 @@
+apiVersion: configuration.konghq.com/v1
+kind: KongIngress
+metadata:
+  name: landing
+proxy:
+  path: /
+route:
+  strip_path: true
+spec:
+  rules:
+  - http:
+      paths:
+      - path: /
+        backend:
+          serviceName: docs-site
+          servicePort: 5000

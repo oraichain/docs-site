@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: docs-site
+  labels:
+    app: docs-site
+spec:
+  selector:
+    matchLabels:
+      app: docs-site
+  replicas: 2
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 0
+  template:
+    metadata:
+      labels:
+        app: docs-site
+    spec:
+      containers:
+      - name: docs-site
+        image: thao1996/docs-site:6dee50a620f7ac2ae808decc2801f62941559952
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 5000
+      imagePullSecrets:
+      - name: regcred
+      restartPolicy: Always

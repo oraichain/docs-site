@@ -49,8 +49,10 @@ jobs:
         git config --local user.email "nguyentienthao96@gmail.com"
         git config --local user.name "Thao Nguyen Tien"
         git commit -am "Delivery to prod"
-    - name: echo
-      run: echo ${{ github }}
+    - name : GITHUB CONTEXT
+      env:
+        GITHUB_CONTEXT: ${{ toJson(github) }}
+      run: echo "$GITHUB_CONTEXT"
     - name: Push changes
       uses: ad-m/github-push-action@master
       with:

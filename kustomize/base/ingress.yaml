@@ -4,7 +4,7 @@ metadata:
   name: docs-site
 spec:
   rules:
-  - host: docs.orai.io
+  - host: staging-docs.orai.io
     http:
       paths:
       - path: /

@@ -8,4 +8,4 @@ namespace: hello-gitops
 images:
 - name: docs-site
   newName: thao1996/docs-site
-  newTag: 8b9e9fb8fd063980ddc26c64e25ed65b52d5018a
+  newTag: 4e57d1d32614396ae73912ea5db0cffba0056e54

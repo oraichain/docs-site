@@ -4,7 +4,6 @@ resources:
 - deployment.yaml
 - service.yaml
 - ingress.yaml
-namespace: orai-prod
 images:
 - name: docs-site
   newName: thao1996/docs-site

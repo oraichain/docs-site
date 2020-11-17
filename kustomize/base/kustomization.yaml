@@ -8,4 +8,4 @@ namespace: prod
 images:
 - name: docs-site
   newName: thao1996/docs-site
-  newTag: e49f2535d643faaa595ffc94b65f49bae4ca146b
+  newTag: 2227ee7c7d6cc560f656b6523d07d44a606e78e2

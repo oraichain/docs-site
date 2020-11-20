@@ -6,7 +6,7 @@ title: Become a data source provider
 
 ## A brief description of how to develop a data source for an AI service on Oraichain:
 
-### As Oraichain currently supports only shell script, a provider cannot use popular programming languages such as Python, Java to develop their services.
+ As Oraichain currently supports only shell script, a provider cannot use popular programming languages such as Python, Java to develop their services.
 
 When developing the data source script, the job is fairly simple with no input arguments, as the providers only need to call their API using a cURL request. However, the output of a data source must be a string, not an object. A simple data source is given as follows:
 

@@ -37,21 +37,25 @@ jobs:
       with:
         kustomize-version: "3.6.1"
 
-    - name: Update Kubernetes resources
+    - name: Update Kubernetes resources for staging
       env:
         DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
       run: |
-       cd kustomize/base
+       cd kustomize/staging
+       kustomize edit set image docs-site=$DOCKER_USERNAME/docs-site:$GITHUB_SHA
+     
+    - name: Update Kubernetes resources for prod
+      env:
+        DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
+      run: |
+       cd kustomize/prod
        kustomize edit set image docs-site=$DOCKER_USERNAME/docs-site:$GITHUB_SHA
     - name: Commit files
       run: |
         git config --local user.email "nguyentienthao96@gmail.com"
         git config --local user.name "Thao Nguyen Tien"
-        git commit -am "Delivery to prod ${{github.event.commits.message }}" 
-    # - name : GITHUB CONTEXT
-    #   env:
-    #     GITHUB_CONTEXT: ${{ toJson(github) }}
-    #   run: echo "$GITHUB_CONTEXT"
+        git commit -am 'Delivery to prod ${{ github.event.commits.message }}' 
+
     - name: Push changes
       uses: ad-m/github-push-action@master
       with:

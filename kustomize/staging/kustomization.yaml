@@ -1,0 +1,11 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+resources:
+- deployment.yaml
+- service.yaml
+- ingress.yaml
+# namespace: prod
+images:
+- name: docs-site
+  newName: thao1996/docs-site
+  newTag: fc5d575f69bfa2b6d1059043237bbc38048a9a3c

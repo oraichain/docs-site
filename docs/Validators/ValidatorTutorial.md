@@ -105,7 +105,13 @@ node index.js to start the server
 sudo apt install jq
 ```
 
-15. Happy validating !!
+15. Install curl to call APIs provided by the providers (optional in case the data sources )
+
+```
+sudo apt install curl
+```
+
+16. Happy validating !!
 
 #### Note:
 

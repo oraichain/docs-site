@@ -9,7 +9,13 @@ module.exports = {
       "WhitePaper/TokenEconomics",
       "WhitePaper/ProtocolMessages",
     ],
-    Developer: ["Developers/OraichainInstallation"],
+    Developer: [
+      "Developers/OraichainInstallation",
+      "Developers/become-a-ds-provider",
+      "Developers/become-a-tc-provider",
+      "Developers/become-an-oracle-script-dev",
+      
+    ],
     Validator: ["Validators/become-a-validator"],
   },
 };

@@ -8,4 +8,4 @@ resources:
 images:
 - name: docs-site
   newName: thao1996/docs-site
-  newTag: fc5d575f69bfa2b6d1059043237bbc38048a9a3c
+  newTag: 3b400ff2416626fed22a199f4a46f85ced789673

@@ -10,9 +10,7 @@ spec:
     targetRevision: HEAD
     path: kustomize/base
     directory:
-      recurse: true
+      recurse: false
   destination:
     server: https://kubernetes.default.svc
     namespace: prod
-  kustomize:
-      version: v3.5.4

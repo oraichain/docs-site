@@ -8,7 +8,7 @@ spec:
   source:
     repoURL: git@github.com:oraichain/docs-site.git
     targetRevision: HEAD
-    path: kustomize/base
+    path: kustomize/staging
     directory:
       recurse: false
   destination:

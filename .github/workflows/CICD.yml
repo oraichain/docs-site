@@ -43,12 +43,11 @@ jobs:
       run: |
        cd kustomize/base
        kustomize edit set image docs-site=$DOCKER_USERNAME/docs-site:$GITHUB_SHA
-       cat kustomization.yaml
     - name: Commit files
       run: |
         git config --local user.email "nguyentienthao96@gmail.com"
         git config --local user.name "Thao Nguyen Tien"
-        git commit -am "Delivery to prod $github.event.commits.message }}" 
+        git commit -am "Delivery to prod ${{github.event.commits.message }}" 
     # - name : GITHUB CONTEXT
     #   env:
     #     GITHUB_CONTEXT: ${{ toJson(github) }}

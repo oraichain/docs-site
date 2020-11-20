@@ -14,3 +14,5 @@ spec:
   destination:
     server: https://kubernetes.default.svc
     namespace: prod
+  kustomize:
+      version: v3.5.4

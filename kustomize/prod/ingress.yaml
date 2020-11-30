@@ -1,0 +1,13 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: docs-site
+spec:
+  rules:
+  - host: docs.orai.io
+    http:
+      paths:
+      - path: /
+        backend:
+          serviceName: docs-site
+          servicePort: 5000

@@ -55,16 +55,14 @@ the loop goes on until all validators have received their rewards.
 
 ### Second way
 
-The validators can actively participate in executing the oracle scripts to receive 60% of the rewards by publishing reports. A report contains information on the validator that created it, the data sources, test cases used, and the block containing that report transaction. Using this information, we can collect validators, test case owners, and data source owners involved in a specific block to reward them. Only those creating reports are able to receive the rewards. The formulas are similar to those in the first way with only minor changes:
+The validators can actively participate in executing the oracle scripts to receive 20% of the rewards by publishing reports. A report contains information on the validator that created it, the data sources, test cases used, and the block containing that report transaction. Using this information, we can collect validators, test case owners, and data source owners involved in a specific block to reward them. Half of the total fees is reserved for rewarding data source and test case owners. Only those creating reports are able to receive the rewards. The formulas are as follows:
 
-**(1) reward mulitplier = 1 - community tax * 2**
+**Provider reward = total request fees within the previous block * 0.5**
 
-The reason is that we need to allocate rewards to a lot of individuals, so validators should not get rewarded too much
+Here, we make sure that every Data Source and Test Case owner receives the correct amount that he requires after running the script. For example, an Oracle Script runs two AI Data Sources, 1 Test Case, each requires 0.05 ORAI to execute. As a result, the minimum fee needed is 1.5 ORAI, which is equal to total request fees within the previous block * 0.5.
 
-**(2) a validator's reward = total fee * 60% * reward multiplier * power fraction**
+**Validator reward = Provider reward * 0.4 or total request fees within the previous block * 0.2**
 
-**(3) fraction of endpoints / test cases = 0.01**
+In here, validators that participate in the Oracle Script execution process will receive their rewards according to their voting powers within the **validator reward**.
 
-**(4) endpoint owners / test case owners reward = total fee * 60% * reward multiplier * fraction**
-
-After the second way is applied, if there are any fees left in the fee collector, they will be allocated accordingly using the first way. However, the network only applies the first way when no reports are set after committing a block.
+The rest of the request fees (the remaining 30%) will be allocated to the validator that has successfully proposed a new block along with taxes that go into the community pool using the first way.

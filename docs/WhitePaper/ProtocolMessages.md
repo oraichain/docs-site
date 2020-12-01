@@ -4,10 +4,10 @@ title: Protocol Messages
 ---
 
 ## Cosmos SDK Messages
-Since the Oraichain blockchain is built from the Cosmos network, it also supports all message types of Cosmos SDK.
+Since the Oraichain blockchain is built from the Cosmos network, it also supports all message types of Cosmos SDK so that they can be delivered to all nodes for execution and querying. For simplicity, all message types follow the same protocol, which are described on the [Cosmos SDK documentation](https://docs.cosmos.network/master/building-modules/messages-and-queries.html)
 
 ## Oraichain Messages
-In order to support validators running oracle scripts, AI Data Source, and AI Testcase, there are other message types implemented on Oraichain as follows:
+All Oraichain messages use the same protocol as other Cosmos SDK message types. To support validators running Oracle Scripts, AI Data Source, and AI Testcase, there are other message types implemented on Oraichain as follows:
 
 ### Oraichain Specific Messages
 
@@ -15,119 +15,205 @@ Apart from the messages that stems from the Cosmos SDK, Oraichain also supports 
 
 #### MsgCreateAIDataSource
 
-Deploys and registers a new ai data source to Oraichain. Once registered, the data source is assigned a data source prefix with its unique name as an identifier which can be used to refer to it forever.
+Deploys and registers a new AI Data Source to Oraichain. Once registered, the Data Source is assigned a Data Source prefix with its unique name as an identifier which can be used to refer to it forever.
 
 Parameter | Type | Description
 ---------|----------|---------
- Owner | `sdk.AccAddress` | The address of the entity who will be responsible for maintaining the ai data source
- Name | `string` | The human-readable string name for this data source
-Description | `string` | The description of this data source
-Code | `[]byte` | The source code in bytes of this data source
-Fees | `string` | The transaction fee required to run this data source. Eg: 5000orai
+Owner | `sdk.AccAddress` | The address of the entity who will be responsible for maintaining the ai Data Source
+Name | `string` | The human-readable string name for this Data Source
+Description | `string` | The description of this Data Source
+Code | `[]byte` | The source code in bytes of this Data Source
+Fees | `string` | The transaction fee required to run this Data Source. Eg: 5000orai
+
+message type: set_datasource
 
 ### MsgEditAIDataSource
 
-Edits an existing data source given the unique identifier
+Edits an existing Data Source given the unique identifier
 
 Parameter | Type | Description
 ---------|----------|---------
-OldName | `string` | The current unique identifier that the data source has
-NewName | `string` | The new unique identifier and also the new name that the data source is assigned to. If it is identical to the OldName, then the identifier is unchanged.
-Owner | `sdk.AccAddress` | The address of the entity who will be responsible for maintaining the ai data source
-Description | `string` | The description of this data source
-Code | `[]byte` | The source code in bytes of this data source
-Fees | `string` | The transaction fee required to run this data source. Eg: 5000orai
+OldName | `string` | The current unique identifier that the Data Source has
+NewName | `string` | The new unique identifier and also the new name that the Data Source is assigned to. If it is identical to the OldName, then the identifier is unchanged
+Owner | `sdk.AccAddress` | The address of the entity who will be responsible for maintaining the ai Data Source
+Description | `string` | The description of this Data Source
+Code | `[]byte` | The source code in bytes of this Data Source
+Fees | `string` | The transaction fee required to run this Data Source. Eg: 5000orai
+
+message type: edit_datasource
 
 ### QueryResAIDataSource
 
-When querying, the user only needs to type the name of the data source, and the system will return three attributes below in JSON format.
+When querying, the user only needs to type the name of the Data Source, and the system will return three attributes below in JSON format.
 
 Parameter | Type | Description
 ---------|----------|---------
-Name | `string` | The human-readable string name for this data source
-Owner | `sdk.AccAddress` | The address of the entity who will be responsible for maintaining the ai data source
-Code | `string` | The source code in string of this data source
-Description | `string` | The description of this data source
+Name | `string` | The human-readable string name for this Data Source
+Owner | `sdk.AccAddress` | The address of the entity who will be responsible for maintaining the ai Data Source
+Code | `string` | The source code in string of this Data Source
+Description | `string` | The description of this Data Source
+
+query type: datasource
+
+### QueryResAIDataSources
+
+A list of AI Data Sources with its size will be shown after querying.
+
+Parameter | Type | Description
+---------|----------|---------
+QueryResAIDSources | `[]QueryResAIDataSource` | The list of the AI Data Sources with attributes of the `QueryResAIDataSource`
+Count | `int` | The size of the Data Source list
+
+query type: datasources
+
+### QueryResAIDataSourceNames
+
+A list of AI Data Source unique identifiers will be shown.
+
+Parameter | Type | Description
+---------|----------|---------
+QueryResAIDataSourceNames | `[]string` | The list of the AI Data Source identifiers in string
+
+query type: dnames
 
 ### MsgCreateOracleScript
 
-Deploys a new oracle script to Oraichain's network. Once registered, the script is assigned a unique oracle script prefix + name identifier which can be used to refer to it forever.
+Deploys a new Oracle Script to Oraichain's network. Once registered, the script is assigned a unique Oracle Script prefix + name identifier which can be used to refer to it forever.
 
 Parameter | Type | Description
 ---------|----------|---------
 Owner | `sdk.AccAddress` | The address of the entity who will be responsible for maintaining the Oracle Script
-Name | `string` | The human-readable string name for this data source
-Description | `string` | The description of this oracle script
-Code | `[]byte` | The source code in bytes of this oracle script
+Name | `string` | The human-readable string name for this Data Source
+Description | `string` | The description of this Oracle Script
+Code | `[]byte` | The source code in bytes of this Oracle Script
+
+message type: set_oscript
 
 ### MsgEditOracleScript
 
-Edits an existing oracle script given the unique identifier which is the name. The sender must be the owner of the oracle script for the transaction to succeed.
+Edits an existing Oracle Script given the unique identifier which is the name. The sender must be the owner of the Oracle Script for the transaction to succeed.
 
 Parameter | Type | Description
 ---------|----------|---------
-OldName | `string` | The current unique identifier that the oracle script has
-NewName | `string` | The new unique identifier and also the new name that the oracle script is assigned to. If it is identical to the OldName, then the identifier is unchanged.
+OldName | `string` | The current unique identifier that the Oracle Script has
+NewName | `string` | The new unique identifier and also the new name that the Oracle Script is assigned to. If it is identical to the OldName, then the identifier is unchanged
 Owner | `sdk.AccAddress` | The address of the entity who will be responsible for maintaining the Oracle Script
-Description | `string` | The description of this oracle script
-Code | `[]byte` | The source code in bytes of this oracle script
+Description | `string` | The description of this Oracle Script
+Code | `[]byte` | The source code in bytes of this Oracle Script
+
+message type: edit_oscript
 
 ### QueryResOracleScript
 
-When querying, the user only needs to type the name of the oracle script, and the system will return three attributes below in JSON format.
+When querying, the user only needs to type the name of the Oracle Script, and the system will return three attributes below in JSON format.
 
 Parameter | Type | Description
 ---------|----------|---------
-Name | `string` | The human-readable string name for this oracle script
-Owner | `sdk.AccAddress` | The address of the entity who will be responsible for maintaining the oracle script
-Code | `string` | The source code in string of this oracle script
-Description | `string` | The description of this oracle script
+Name | `string` | The human-readable string name for this Oracle Script
+Owner | `sdk.AccAddress` | The address of the entity who will be responsible for maintaining the Oracle Script
+Code | `string` | The source code in string of this Oracle Script
+Description | `string` | The description of this Oracle Script
+MinimumFees | `sdk.Coins` | The minimum fees required to run this Oracle Script
+DSources | `[]string` | The list of AI Data Source identifiers that this Oracle Script uses
+TCases | `[]string` | The list of Test Case identifiers that this Oracle Script uses
+
+query type: oscript
+
+### QueryResOracleScripts
+
+A list of Oracle Scripts with its size will be shown after querying.
+
+Parameter | Type | Description
+---------|----------|---------
+QueryResOScripts | `[]QueryResOracleScript` | The list of the Oracle Scripts with attributes of the `QueryResOracleScript`
+Count | `int` | The size of the Oracle Script list
+
+query type: oscripts
+
+### QueryResOracleScriptNames
+
+A list of AI Data Source unique identifiers will be shown.
+
+Parameter | Type | Description
+---------|----------|---------
+QueryResOracleScriptNames | `[]string` | The list of the Oracle Script identifiers in string
+
+query type: onames
 
 ### MsgCreateTestCase
 
 Parameter | Type | Description
 ---------|----------|---------
- Owner | `sdk.AccAddress` | The address of the entity who will be responsible for maintaining the test case
- Name | `string` | The human-readable string name for this test case
-Description | `string` | The description of this test case
-Code | `[]byte` | The source code in bytes of this test case
-Fees | `string` | The transaction fee required to run this test case. Eg: 5000orai
+ Owner | `sdk.AccAddress` | The address of the entity who will be responsible for maintaining the Test Case
+ Name | `string` | The human-readable string name for this Test Case
+Description | `string` | The description of this Test Case
+Code | `[]byte` | The source code in bytes of this Test Case
+Fees | `string` | The transaction fee required to run this Test Case. Eg: 5000orai
+
+message type: set_test_case
 
 ### MsgEditTestCase
 
 Parameter | Type | Description
 ---------|----------|---------
-OldName | `string` | The current unique identifier that the test case has
-NewName | `string` | The new unique identifier and also the new name that the test case is assigned to. If it is identical to the OldName, then the identifier is unchanged.
-Owner | `sdk.AccAddress` | The address of the entity who will be responsible for maintaining the ai test case
-Description | `string` | The description of this test case
-Code | `[]byte` | The source code in bytes of this test case
-Fees | `string` | The transaction fee required to run this test case. Eg: 5000orai
+OldName | `string` | The current unique identifier that the Test Case has
+NewName | `string` | The new unique identifier and also the new name that the Test Case is assigned to. If it is identical to the OldName, then the identifier is unchanged.
+Owner | `sdk.AccAddress` | The address of the entity who will be responsible for maintaining the ai Test Case
+Description | `string` | The description of this Test Case
+Code | `[]byte` | The source code in bytes of this Test Case
+Fees | `string` | The transaction fee required to run this Test Case. Eg: 5000orai
+
+message type: edit_test_case
 
 ### QueryResTestCase
 
-When querying, the user only needs to type the name of the data source, and the system will return three attributes below in JSON format.
+When querying, the user only needs to type the name of the Data Source, and the system will return three attributes below in JSON format.
 
 Parameter | Type | Description
 ---------|----------|---------
-Name | `string` | The human-readable string name for this test case
-Owner | `sdk.AccAddress` | The address of the entity who will be responsible for maintaining the test case
-Code | `string` | The source code in string of this test case
-Description | `string` | The description of this test case
+Name | `string` | The human-readable string name for this Test Case
+Owner | `sdk.AccAddress` | The address of the entity who will be responsible for maintaining the Test Case
+Code | `string` | The source code in string of this Test Case
+Description | `string` | The description of this Test Case
+
+query type: testcase
+
+### QueryResTestCases
+
+A list of Test Cases with its size will be shown after querying.
+
+Parameter | Type | Description
+---------|----------|---------
+QueryResTestCases | `[]QueryResTestCase` | The list of the Test Cases with attributes of the `QueryResTestCase`
+Count | `int` | The size of the Test Case list
+
+query type: testcases
+
+### QueryResTestCaseNames
+
+A list of Test Case unique identifiers will be shown.
+
+Parameter | Type | Description
+---------|----------|---------
+QueryResTestCaseNames | `[]string` | The list of the Test Case identifiers in string
+
+query type: tcnames
 
 ### MsgSetAIRequest
 
-Requests a new data based on an existing oracle script. A data request will be assigned a unique identifier with an AI request prefix once the transaction is confirmed. After sufficient validators report successfully. The results of the data requests will be written and stored permanently on Oraichain for future uses.
+Requests a new data based on an existing Oracle Script. A data request will be assigned a unique identifier with an AI request prefix once the transaction is confirmed. After sufficient validators report successfully. The results of the data requests will be written and stored permanently on Oraichain for future uses.
 
 Parameter | Type | Description
 ---------|----------|---------
-RequestID | `string` | the unique identifier of this oracle request, as specified by the client. This same unique ID will be sent back to the requester with the oracle response. This field is filled automatically, so the user does not need to care about this.
-OracleScriptName | `string` | The unique name identifier of the oracle script.
-Creator | `sdk.AccAddress` | The address of the message's sender or creator of this request.
-ImageHash | `string` | The image hash stored on IPFS. Each validator will collect the actual image using this hash to send to the AI data sources.
-ImageName | `string` | The image name to send to the AI data sources.
-ValidatorCount | `int64` | The number of validators that are needed to execute the request. The current default value is 1 for testing.
-Fees | `string` | The transaction fee required to run this test case. Eg: 5000orai
+RequestID | `string` | the unique identifier of this oracle request, as specified by the client This same unique ID will be sent back to the requester with the oracle response. This field is filled automatically, so the user does not need to care about this
+OracleScriptName | `string` | The unique name identifier of the Oracle Script
+Creator | `sdk.AccAddress` | The address of the message's sender or creator of this request
+ValidatorCount | `int64` | The number of validators that are needed to execute the request. The current default value is 1 for testing
+Fees | `string` | The transaction fee required to run this Test Case. Eg: 5000orai
+Input | `string` | User's input for the Test Case
+ExpectedOutput | `string` | User's expected output for the Test Case
+
+message type: set_ai_request
 
 ### QueryResAIRequest
 
@@ -135,14 +221,26 @@ When querying, the user only needs to type the id of the AI request, and the sys
 
 Parameter | Type | Description
 ---------|----------|---------
-RequestID | `string` | the unique identifier of this oracle request, as specified by the client. This same unique ID will be sent back to the requester with the oracle response. This field is filled automatically, so the user does not need to care about this.
-OracleScriptName | `string` | The unique name identifier of the oracle script.
-Creator | `sdk.AccAddress` | The address of the message's sender or creator of this request.
-Validators | `[]sdk.ValAddress` | The list validator addresses that participate in the request.
-BlockHeight | `int64` | The block height that contains the transaction creating the AI request.
-AIDataSources | `[]AIDataSource` | The list of data sources that will be called.
-TestCases | `[]TestCase` | The list of test cases that will be called.
+RequestID | `string` | the unique identifier of this oracle request, as specified by the client This same unique ID will be sent back to the requester with the oracle response. This field is filled automatically, so the user does not need to care about this
+OracleScriptName | `string` | The unique name identifier of the Oracle Script
+Creator | `sdk.AccAddress` | The address of the message's sender or creator of this request
+Validators | `[]sdk.ValAddress` | The list validator addresses that participate in the request
+BlockHeight | `int64` | The block height that contains the transaction creating the AI request
+AIDataSources | `[]AIDataSource` | The list of Data Sources that will be called
+TestCases | `[]TestCase` | The list of Test Cases that will be called
 Fees | `string` | The transaction fee required to run this request. Eg: 20000orai
+
+query type: aireq
+
+### QueryResAIRequestIDs
+
+A list of AI Request unique identifiers will be shown.
+
+Parameter | Type | Description
+---------|----------|---------
+QueryResAIRequestIDs | `[]string` | The list of the AI Request identifiers in string
+
+query type: aireqs
 
 ### QueryResFullRequest
 
@@ -150,5 +248,8 @@ When querying, the user only needs to type the id of the AI request, and the sys
 
 Parameter | Type | Description
 ---------|----------|---------
-AIRequest | `AIRequest` | The AIRequest object that is stored on Oraichain which shows all the information about an AI request.
-Reports | `[]Report` | The list of reports created by the validators after executing the test cases and data sources.
+AIRequest | `AIRequest` | The AIRequest object that is stored on Oraichain which shows all the information about an AI request
+Reports | `[]Report` | The list of reports created by the validators after executing the Test Cases and Data Sources
+Result | `AIRequestResult` | A wrapper attribute for the request results. Behind the scenes, it includes a request ID, status of the request result as well as a list of results from the validators
+
+query type: fullreq

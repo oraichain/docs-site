@@ -29,13 +29,13 @@ The proposed Oraichain could be a bridge to bring AI to smart contracts. The Ora
 
 - Oracle AI: Oraichain enables smart contracts to securely access external AI APIs. Artificial Intelligence helps enhance smart contracts.
 
-AI Marketplace: Have access to, look up, and choose an ever-increasing AI algorithms and models from different providers around the world. Develop your applications along with the integration of AI services to increase your application functionalities as well as values.
+- AI Marketplace: Have access to, look up, and choose an ever-increasing AI algorithms and models from different providers around the world. Develop your applications along with the integration of AI services to increase your application functionalities as well as values.
 
-AI Provider: AI developers, individuals or companies, can have a chance to publish, edit, and manage their work and earn rewards from the users on a global scale. Hence, you can improve your models, even more, collect data and continue to provide exceptional AI services.
+- AI Provider: AI developers, individuals or companies, can have a chance to publish, edit, and manage their work and earn rewards from the users on a global scale. Hence, you can improve your models, even more, collect data and continue to provide exceptional AI services.
 
-Staking & Earning: Staking means earning. By staking your ORAI tokens into one or more validators, you will have a chance to participate in the system as a governor while earning more. Moreover, by doing so, your contributions also have a positive impact on our operations of the network. It is a win-win for all sides.
+- Staking & Earning: Staking means earning. By staking your ORAI tokens into one or more validators, you will have a chance to participate in the system as a governor while earning more. Moreover, by doing so, your contributions also have a positive impact on our operations of the network. It is a win-win for all sides.
 
-Users & AI requests: Users can make different requests to AI services that are not easy to find elsewhere, as the service providers may not have enough resources to provide a stand-alone AI service application. If the services are great, sending funds to these services can be worth considering to allow them to grow more and more.
+- Users & AI requests: Users can make different requests to AI services that are not easy to find elsewhere, as the service providers may not have enough resources to provide a stand-alone AI service application. If the services are great, sending funds to these services can be worth considering to allow them to grow more and more.
 
 - ORAI DAO: you are the governor of the product serving you. Oraichain is of, for, and by the community. Oraichain team just helps initialize the project and when the mainnet is started, any changes of Oraichain should be reviewed by validators and stakeholders.
 
@@ -50,6 +50,7 @@ The single state of blockchain ledger makes all operations deterministic. It mea
 Oracle, in terms of definition, is a person who can provide useful information. We also have Oracle as a name of a company, but this is not that Oracle. Oracle in the blockchain is a type of middleware that connects blockchain with the resources outside. In the past, blockchain could only have access to its internal data and resources, which is very limited, whereas other systems were free to do so with simple REST APIs. Now things have changed, oracle has come to provide blockchain more functionalities by allowing it to call external APIs. In a blockchain, an oracle can be a node that collects data from other sources of data. It also can be a script file that calls a CURL request and receive the request's response before writing that response onto the blockchain.
 
 Oraichain provides an oracle that helps fetch external data securely and its architecture is designed to focus more on AI data sources as follows:
+
 - Request format including input parameters and test cases
 - API testing based test cases that is the unique functionality.
 - Test providers proposing suitable test cases that users can choose to test an AI API.

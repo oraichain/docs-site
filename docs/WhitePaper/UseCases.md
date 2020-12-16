@@ -7,16 +7,14 @@ AI will be the next big thing and upgrade of smart contracts in DApps. How to ma
 Oraichain also supports regular centralized applications in using AI APIs on the decentralized Oraichain marketplace. Users can find better AI providers with better price in this marketplace.
 
 ## Yield farming using AI services on Oraichain (yAI)
-MVP version: https://yai.finance
+Beta version: https://yai.finance
 
-The yield farming based on Oraichain (namely yAI) has got inspiration from yearn.finance (YFI) that helps reduce the complexity of yield trading and provides trading strategies from crowdsourcing DAO voting. Instead of using crowdsourcing knowledge, Oraichain provides AI-based price prediction APIs as inputs to smart contracts. The yield farming use case has two functionalities as follows:
-- Earn: Get price prediction from Oraichain and automatically decide BUY/SELL tokens. You can choose the best performance AI APIs.
-- Vaults: Apply automated trading oracle scripts on Oraichain. You deposit tokens and the assigned oracle script will find the best AI input and maximize your yield.
+The yield farming based on Oraichain (namely yAI) has got inspiration from yearn.finance (YFI) that helps reduce the complexity of yield trading and provides trading strategies from crowdsourcing DAO voting. Instead of using crowdsourcing knowledge, Oraichain provides AI-based strategies as inputs to smart contracts.
 
-Compared to yearn.finance (crowdsourcing-based strategies), AI-based trading performance could be less efficient, but risk management could be better since all buying or selling decision is based on AI models (or by machine) and not by human psychology.
-Moreover, yAI is based on data-driven information fetching from Oraichain in order to provide automated trading smart contracts.
-
-Our current design of yAI (MVP) is getting trading signals (e.g. market sentiment, support and resistance) from outside and doing optimized trading like YFI. But yAI is not based on community-based trading strategies.
+There are three features in this use case:
+- AI-based vaults: strategy is optimized based on the metric of ROI, Risk score, and Price prediction. Strategies are provided by AI providers on Oraichain.
+- Metric of ROI, risk score, and price prediction of all pools and vaults getting from Oraichain.
+- Tracking your investment on all pools and vaults getting from Oraichain.
 
 ## Flexible smart contracts using face authentication
 There are several scenarios in which face authentication is very useful as follows:

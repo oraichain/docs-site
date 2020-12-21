@@ -28,13 +28,6 @@ AI Data Source is a basic element in the Oraichain network. It describes a way t
 - The source code of the data source that will be executed by the validators.
 - The overall description of the data source.
 
-Below are the attributes of an AI Data Source that are stored on-chain:
-
-- The owner of the AI Data Source, which is also the one that receives incentives. Moreover, the owner can edit the information related to his data sources.
-- Name of the data source.
-- The transaction fee when requesting data from the AI model.
-- The overall description of the data source.
-
 If you notice, the source code of the data source is only stored off-chain, because its size can be large. We should only keep the stored data small only to minimize the gas fee and execution time for the nodes.
 
 ## Testcase Provider

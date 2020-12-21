@@ -7,13 +7,18 @@ When we call **ORAI**, it means that it is native ORAI tokens created and contai
 
 
 ## ORAI token distribution (%)
+Updated Tokenomics and Distribution V3:
+https://medium.com/oraichain/oraichain-tokenomics-v3-73-token-burn-and-key-updates-4e99d1972bcf
+
 **The token supply distribution is as follows:**
 
-![Oraichain’s System Overview](../../static/img/token-allocation-chart.png)
+![Token allocation](../../static/img/token-allocation-chart.png)
 
 **ORAI token release schedule (%):**
 
-![Oraichain’s System Overview](../../static/img/token-release-schedule.png)
+![Token release](../../static/img/token-release-schedule.png)
+
+![Token release 2](../../static/img/token-release-schedule-small.png)
 
 ## Token governance and use of funds
 Funds raised in the seed and private rounds will be spent according to the following allocations:

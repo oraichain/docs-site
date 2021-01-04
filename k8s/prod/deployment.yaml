@@ -21,7 +21,7 @@ spec:
     spec:
       containers:
       - name: docs-site
-        image: thao1996/docs-site:0.1.2
+        image: thao1996/docs-site:0e3619dc8d154d28eb4e5b7a2a42b9c7fef97148
         env:
         - name: REACT_APP_SITE_TITLE
           value: "Oraiscan - Oraichain explorer"

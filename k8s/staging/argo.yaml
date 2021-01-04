@@ -1,16 +1,16 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: orai-docs-site
+  name: docs-site
   namespace: argocd
 spec:
   project: default
   source:
     repoURL: git@github.com:oraichain/docs-site.git
     targetRevision: HEAD
-    path: kustomize/staging
+    path: k8s/staging
     directory:
-      recurse: false
+      recurse: true
   destination:
     server: https://kubernetes.default.svc
     namespace: staging

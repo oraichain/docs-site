@@ -1,0 +1,22 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: docs-site
+  annotations:
+    nginx.ingress.kubernetes.io/ssl-redirect: "true"
+spec:
+  rules:
+  - host: staging-oraiscan.orai.io
+    http:
+      paths:
+      - path: /
+        backend:
+          serviceName: docs-site
+          servicePort: 5000
+  - host: staging-docs.orai.io
+    http:
+      paths:
+      - path: /
+        backend:
+          serviceName: docs-site
+          servicePort: 5000

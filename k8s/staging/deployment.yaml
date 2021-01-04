@@ -1,0 +1,47 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: docs-site
+  labels:
+    app: docs-site
+spec:
+  selector:
+    matchLabels:
+      app: docs-site
+  replicas: 2
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 0
+  template:
+    metadata:
+      labels:
+        app: docs-site
+    spec:
+      containers:
+      - name: docs-site
+        image: thao1996/docs-site:0.1.2
+        env:
+          - name: REACT_APP_SITE_TITLE
+            value: "Oraiscan - Oraichain explorer"
+          - name: REACT_APP_SITE_DESC
+            value: "AI-Powered Data Oracle"
+          - name: REACT_APP_SITE_KEYWORDS
+            value: "Oraichain, Oraiscan, AI Oracle"
+          - name: REACT_APP_SITE_URL
+            value: "https://scan.orai.io"
+          - name: REACT_APP_SITE_TITLE_FOR_SHARE
+            value: "Oraiscan - Oraichain explorer "
+          - name: REACT_APP_API_DEV
+            value: "https://api.scan.orai.io/v1"
+          - name: REACT_APP_API_PROD
+            value: "https://api.scan.orai.io/v1"
+          - name: REACT_APP_WALLET_API
+            value: "https://api.wallet.orai.io"
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 5000
+      imagePullSecrets:
+      - name: regcred
+      restartPolicy: Always

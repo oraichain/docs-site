@@ -17,5 +17,6 @@ module.exports = {
       
     ],
     Validator: ["Validators/become-a-validator"],
+    Guide: ["Guide/bridge"],
   },
 };

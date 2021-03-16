@@ -1,12 +1,12 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: oraiscan-frontend
+  name: docs-site
   namespace: argocd
 spec:
   project: default
   source:
-    repoURL: git@github.com:oraichain/oraiscan-frontend.git
+    repoURL: git@github.com:oraichain/docs-site.git
     targetRevision: HEAD
     path: k8s/prod
     directory:

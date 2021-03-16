@@ -11,3 +11,10 @@ spec:
         backend:
           serviceName: docs-site
           servicePort: 5000
+  - host: docs.orai.io
+    http:
+      paths:
+      - path: /
+        backend:
+          serviceName: docs-site
+          servicePort: 5000

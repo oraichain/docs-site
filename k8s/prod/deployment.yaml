@@ -21,7 +21,7 @@ spec:
     spec:
       containers:
       - name: docs-site
-        image: thao1996/docs-site:9685eb1e7ab1d996bf5d7b3061cb75041c3411e5
+        image: thao1996/docs-site:974ee15f3ecc7d3893375eedb0b3ec9a93abceb0
         imagePullPolicy: Always
         ports:
         - containerPort: 5000

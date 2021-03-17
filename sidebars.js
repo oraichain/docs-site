@@ -14,9 +14,9 @@ module.exports = {
       "Developers/become-a-ds-provider",
       "Developers/become-a-tc-provider",
       "Developers/become-an-oracle-script-dev",
-      
+
     ],
     Validator: ["Validators/become-a-validator"],
-    Guide: ["Guide/bridge"],
+    Guide: ["Guide/bridge", "Guide/create-mainnet-account", "Guide/delegate-tokens-to-a-validator"],
   },
 };

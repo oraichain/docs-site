@@ -17,6 +17,6 @@ module.exports = {
 
     ],
     Validator: ["Validators/become-a-validator"],
-    Guide: ["Guide/bridge", "Guide/create-mainnet-account", "Guide/delegate-tokens-to-a-validator"],
+    Guide: ["guide/bridge", "guide/create-mainnet-account", "guide/delegate-tokens-to-a-validator"],
   },
 };

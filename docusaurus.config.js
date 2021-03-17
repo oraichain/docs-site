@@ -35,7 +35,7 @@ module.exports = {
               href: "https://orai.io",
             },
             {
-              label: "Yield Farming",
+              label: "yAI Finance",
               href: "https://yai.finance",
             },
           ],
@@ -58,7 +58,7 @@ module.exports = {
           items: [
             {
               label: "Blog",
-              to: "blog",
+              href: "https://medium.com/oraichain",
             },
             {
               label: "GitHub",

@@ -1,6 +1,6 @@
 ---
-id: bridge
-title: A Tutorial On Oraichain Bridge
+id: erc20-bep20
+title: How To Convert ORAI ERC20 To BEP20 And Vice Versa?
 
 ---
 

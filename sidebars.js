@@ -17,6 +17,11 @@ module.exports = {
 
     ],
     Validator: ["Validators/become-a-validator"],
-    Guide: ["guide/bridge", "guide/create-mainnet-account", "guide/delegate-tokens-to-a-validator"],
+    Guide: [
+      "Guide/erc20-bep20",
+      "Guide/erc20-mainnet",
+       "Guide/create-mainnet-account", 
+       "Guide/delegate-tokens-to-a-validator"
+      ],
   },
 };

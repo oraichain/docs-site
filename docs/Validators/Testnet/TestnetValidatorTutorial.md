@@ -81,9 +81,11 @@ docker-compose restart orai && docker-compose exec -d orai bash -c 'oraivisor st
 
 The above commands run as the background process. You can always run them in the foreground process by removing the "-d" flag
 
+If the synchronization process seems to be stuck, please try to increase the ```max_packet_msg_payload_size``` value in ```.oraid/config/config.toml``` from 1024 to 102400000.
+
 ### 3. Wait until your node is fully synchronized
 
-Please wait until your node is fully synchronized by typing: ```oraid status &> status.json && cat status.json | jq '{catching_up: .SyncInfo.catching_up}'```. If the **catching up** status is **false**, you can continue.
+Please wait until your node is fully synchronized by typing: ```oraid status &> status.json && cat status.json | jq '{catching_up: .SyncInfo.catching_up}'```. If the **catching up** status is **false**, you can continue. Now, you can safely reduce the ```max_packet_msg_payload_size``` to 1024 again.
 
 ### 4. Get some tokens
 
